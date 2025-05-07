@@ -1,0 +1,89 @@
+{% load static %}
+ <!--=====HEADER START=======-->
+
+ <header>
+
+    <div id="vl-header-sticky" class="vl-header-area1 header-tranperent">
+       <div class="container header1-bg">
+          <div class="header-top-area d-none d-lg-block">
+             <div class="row align-items-center">
+                <div class="col-lg-3">
+    
+                </div>
+                <div class="col-lg-6">
+                   <div class="header-top-info d-flex">
+                      <p><img src="/static/web/assets/img/icon/header-top-icon1.svg" alt=""> Laxmisagar, BBSR, Bhubaneshwar-751006</p>
+                      <p class="add-after"><img src="/static/web/assets/img/icon/header-top-icon2.svg" alt=""> 8:00 AM To 10:00 PM</p>
+                   </div>
+                </div>
+                <div class="col-lg-3">
+                   <div class="header-top-info text-end">
+                      <a href="mailto:logicxtransport@.com"><img src="/static/web/assets/img/icon/header-top-icon3.svg" alt=""> logicxtransport@.com</a>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="row align-items-center">
+                <div class="col-lg-3 col-md-6 col-6">
+                   <div class="vl-logo">
+                      <a href="index.html" class="header1-logo d-none d-lg-block"><img src="/static/web/assets/img/logo/white-logo.png" alt=""></a>
+                      <a href="index.html" class="header1-logo d-block d-lg-none"><img src="/static/web/assets/img/logo/black-logo.png" alt=""></a>
+                   </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block text-start">
+                   <div class="vl-main-menu">
+                      <nav class="vl-mobile-menu-active">
+                            <ul>
+                               <li class="has-dropdown">
+                                  <a href="{% url 'web:index' %}">Home <span></span></a>
+                               </li>
+
+                               <li class="has-dropdown">
+                                 <a href="{% url 'web:about' %}">About <span></span></a>
+                              </li>
+
+                              <li class="has-dropdown">
+                                 <a href="{% url 'web:service' %}">Services <span></span></a>
+                              </li>
+
+                              <li class="has-dropdown">
+                                 <a href="{% url 'web:blog' %}">Blogs <span></span></a>
+                              </li>
+
+                              <li class="has-dropdown">
+                                 <a href="{% url 'web:contact' %}">Contact <span></span></a>
+                              </li>
+                              
+                               </ul>
+                               </li>
+
+                            </ul>
+                      </nav>
+                   </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                   <div class="vl-header1-btns text-end d-none d-lg-block">
+                      <div class="buttons">
+                         <div class="vl-search-top">
+                            <button class="search-open-btn"><i class="fa-regular fa-magnifying-glass"></i></button>
+                         </div>
+                         <div class="header-contact-number">
+                            <div class="phone-icon">
+                               <img src="/static/web/assets/img/icon/header-call-icon.svg" alt="">
+                            </div>
+                            <a href="tel:234345-4574">(234) 345-4574</a>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="vl-header-action-item d-block d-lg-none">
+                      <button type="button" class="vl-offcanvas-toggle">
+                            <i class="fa-duotone fa-solid fa-bars-staggered"></i>
+                      </button>
+                   </div>
+                </div>
+          </div>
+       </div>
+    </div>
+ </header>
+
+<!--=====HEADER END =======-->

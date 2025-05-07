@@ -1,0 +1,69 @@
+.hero5-area .hero5-heading{
+    padding-top: 0px;
+}
+.hero5-slider-btns button {
+    border: none;
+    height: 50px !important;
+    width: 50px !important;
+    line-height: 70px;
+    text-align: center;
+    background-color: var(--vtc-bg-main1);
+    color: var(--vtc-text-white);
+    font-size: var(--f-fs-font-20);
+    border-radius: 50%;
+}
+.hero5-slider-btns button::after {
+    font-size: var(--f-fs-font-15) !important;
+}
+
+.hero5-area {
+    height: 650px !important;
+}
+
+.theme-btn1 span.text {
+    font-size: var(--f-fs-font-15);
+}
+.hero5-heading h1 {
+    font-size: var(--f-fs-font-50) !important;
+}
+.footer-space4{
+    padding-top: 0px !important;
+}
+.contact1-form {
+    border-radius: 20px 20px 20px 20px !important;
+}
+.inner-hero .inner-heading h1 {
+    font-size: var(--f-fs-font-50) !important;
+}
+.inner-hero .inner-heading .breadcrumbs-pages ul li {
+    font-size: var(--f-fs-font-20) !important;
+}
+.inner-hero .inner-heading .breadcrumbs-pages ul li a {
+    font-size: var(--f-fs-font-20) !important;
+}
+.inner-hero {
+    min-height: 400px !important;
+}
+.vl-blog-1-item .vl-blog-1-content h4 a {
+    font-size: var(--f-fs-font-18) !important; 
+}
+.vl-blog-1-item .vl-blog1-meta a img {
+    margin-right: 5px !important;
+    height: 15px !important;
+}
+.vl-blog-1-item .vl-blog1-meta a {
+    font-size: 13px; 
+}
+.blog-details-content .image img{
+    border-radius: 10px;
+}
+.heading1 h3{
+    font-size: var(--f-fs-font-22) !important;
+}
+
+.heading1 p {
+    font-size: var(--f-fs-font-16) !important;
+}
+.sidebar-area ._sidebar-widget._recent .recent-blog .recent-blog-post .content h4 a {
+    font-size: var(--f-fs-font-15) !important;
+}
