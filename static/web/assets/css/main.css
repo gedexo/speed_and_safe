@@ -1435,10 +1435,10 @@ a:focus {
   --vtc-text-white90per: rgba(255, 255, 255, 0.9098039216);
   --vtc-text-white80per: rgba(255, 255, 255, 0.8274509804);
   --vtc-text-white70per: rgba(255, 255, 255, 0.6901960784);
-  --vtc-bg-main1: #FA6444;
+  --vtc-bg-main1: #2661AD;
   --vtc-bg-common-1: #EAEEF1;
-  --vtc-bg-common-2: #FFEFEC;
-  --vtc-bg-common-3: #F4F5FF;
+  --vtc-bg-common-2: #D0D7E0;
+  --vtc-bg-common-3: #BACAE0;
   --vtc-bg-common-4: #F0F1F1;
   --vtc-bg-common-5: #F6D8D2;
   --vtc-bg-common-6: #F6F6F6;
@@ -7599,14 +7599,14 @@ a:focus {
   margin-top: 30px;
 }
 .mission-tabs .nav .nav-link {
-  color: var(--Main-Color, #FA6444);
+  color: var(--Main-Color, #2661AD);
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 20px; /* 100% */
   text-transform: uppercase;
   border-radius: 70px;
-  border: 1px solid var(--Main-Color, #FA6444);
+  border: 1px solid var(--Main-Color, #2661AD);
   padding: 16px 22px;
   margin: 0px 10px 30px 0px;
 }

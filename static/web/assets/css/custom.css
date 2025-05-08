@@ -156,6 +156,6 @@
 .header1-bg::before {
     display: none !important;
 }
-.vl-logo img{
-    height: 100px !important;
+.vl-logo img, .vl-footer-logo img{
+    height: 80px !important;
 }

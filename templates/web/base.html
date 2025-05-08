@@ -5,7 +5,7 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Logicx - Logistics And Transportation</title>
+     <title>Speed And Safe</title>
 
      <!--=====FAB ICON=======-->
      <link rel="shortcut icon" href="{% static 'web/assets/img/logo/favicon.svg' %}" type="image/x-icon">
@@ -41,7 +41,7 @@
 <div class="preloader">
    <div class="loading-container">
      <div class="loading"></div>
-     <div id="loading-icon"><img class="main-load" src="{% static 'web/assets/img/logo/preloader-logo.png' %}" alt=""></div>
+     <div id="loading-icon"><img class="main-load" src="{% static 'web/assets/img/logo/logo.png' %}" alt=""></div>
    </div>
  </div>
  <!-- Preloader End -->
@@ -54,7 +54,7 @@
             <div class="search__wrapper">
                <div class="search__top d-flex justify-content-between align-items-center">
                   <div class="search__logo">
-                     <a href="index.html">
+                     <a href="{% url 'web:index' %}">
                         <img src="{% static 'web/assets/img/logo/white-logo.png' %}" alt="">
                      </a>
                   </div>
@@ -102,145 +102,7 @@
 
 </main>
 
-<footer class="vl-footer-area1 footer-space4 bg-cover" style="background-image: url({% static 'web/assets/img/bg/footer1-bg.png' %});">
-
-   <!-- footer area start -->
-   <div class="footer-bottom-content">
-      <div class="container">
-         <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-               <div class="vl-footer-widget vl-footer1-logo-area mr-50 mb-50">
-                  <div class="vl-footer-logo black-logo">
-                     <a href="index.html"><img src="{% static 'web/assets/img/logo/black-logo.png' %}" alt=""></a>
-                  </div>
-                  <div class="vl-footer-text heading1 mt-16">
-                     <p class="mt-16">SEOX is a results-driven SEO and digital marketing agency dedicated to helping businesses thrive in the digital landscape. </p>
-                  </div>
-                  <div class="vl-footer-social1 text-start mt-20">
-                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                     <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-2  col-md-6 col-6">
-               <div class="vl-footer-widget mb-50 ml-0 md:ml-30 sm:ml-0">
-                  <h4>Quick Links</h4>
-                  <div class="vl-footer-list">
-                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="domain.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="testimonial.html">Testimonails</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-6">
-               <div class="vl-footer-widget ml-40 mb-50 md:ml-0 sm:ml-0">
-                  <h4>Category List</h4>
-                  <div class="vl-footer-list">
-                     <ul>
-                        <li><a href="#">Digital Marketing</a></li>
-                        <li><a href="#">SEO Marketing</a></li>
-                        <li><a href="#">Startup Agency</a></li>
-                        <li><a href="#">Advertising Agency</a></li>
-                        <li><a href="#">Social Media Agency</a></li>
-                        <li><a href="#">Web Design Agency</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="col-lg-3 col-md-8 col-sm-6">
-               <div class="vl-footer-recent-project vl-footer-widget">
-                  <h4>Our Latest Project</h4>
-                  <div class="row">
-                     <div class="col-4">
-                        <div class="footer-single-recent-post">
-                           <div class="image">
-                              <img src="{% static 'web/assets/img/footer/footer-recent-post1.png' %}" alt="">
-                           </div>
-                           <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                     </div>
-
-                     <div class="col-4">
-                        <div class="footer-single-recent-post">
-                           <div class="image">
-                              <img src="{% static 'web/assets/img/footer/footer-recent-post2.png' %}" alt="">
-                           </div>
-                           <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                     </div>
-
-                     <div class="col-4">
-                        <div class="footer-single-recent-post">
-                           <div class="image">
-                              <img src="{% static 'web/assets/img/footer/footer-recent-post3.png' %}" alt="">
-                           </div>
-                           <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                     </div>
-
-                     <div class="col-4">
-                        <div class="footer-single-recent-post">
-                           <div class="image">
-                              <img src="{% static 'web/assets/img/footer/footer-recent-post4.png' %}" alt="">
-                           </div>
-                           <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                     </div>
-
-                     <div class="col-4">
-                        <div class="footer-single-recent-post">
-                           <div class="image">
-                              <img src="{% static 'web/assets/img/footer/footer-recent-post5.png' %}" alt="">
-                           </div>
-                           <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                     </div>
-
-                     <div class="col-4">
-                        <div class="footer-single-recent-post">
-                           <div class="image">
-                              <img src="{% static 'web/assets/img/footer/footer-recent-post6.png' %}" alt="">
-                           </div>
-                           <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                     </div>
-
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- footer area end -->
-
-   <!-- copy-right area start -->
-      <div class="container">
-         <div class="row vl-copyright1 _dv-top align-items-center">
-            <div class="col-lg-6">
-               <div class="copyright-text left-side">
-                  <p>© 2025 Logistics Transportation. All Rights Reserved.</p>
-               </div>
-            </div>
-            <div class="col-lg-6">
-               <div class="copyright-text right-side text-end sm:text-start md:text-start">
-                  <a href="#">Privacy Policy</a>
-                  <a href="#" class="add-before"> Disclaimer </a>
-               </div>
-            </div>
-         </div>
-      </div>
-   <!-- copy-right area end -->
-
-</footer>
+{% include 'web/partials/footer.html' %}
 
          <!--=== js === -->
          <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>

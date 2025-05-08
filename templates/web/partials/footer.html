@@ -1,3 +1,4 @@
+{% load static %}
 <footer class="vl-footer-area1 footer-space4 bg-cover" style="background-image: url({% static 'web/assets/img/bg/footer1-bg.png' %});">
 
     <!-- footer area start -->
@@ -7,10 +8,10 @@
              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <div class="vl-footer-widget vl-footer1-logo-area mr-50 mb-50">
                    <div class="vl-footer-logo black-logo">
-                      <a href="index.html"><img src="{% static 'web/assets/img/logo/black-logo.png' %}" alt=""></a>
+                      <a href="{% url 'web:index' %}"><img src="{% static 'web/assets/img/logo/logo.png' %}" alt=""></a>
                    </div>
                    <div class="vl-footer-text heading1 mt-16">
-                      <p class="mt-16">SEOX is a results-driven SEO and digital marketing agency dedicated to helping businesses thrive in the digital landscape. </p>
+                      <p class="mt-16">Delivering trust, quality, and efficiency in bulk food and non-food distribution across the Middle East since 2017. </p>
                    </div>
                    <div class="vl-footer-social1 text-start mt-20">
                       <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -25,12 +26,11 @@
                    <h4>Quick Links</h4>
                    <div class="vl-footer-list">
                       <ul>
-                         <li><a href="index.html">Home</a></li>
-                         <li><a href="about.html">About Us</a></li>
-                         <li><a href="domain.html">Services</a></li>
-                         <li><a href="blog.html">Blog</a></li>
-                         <li><a href="contact.html">Contact Us</a></li>
-                         <li><a href="testimonial.html">Testimonails</a></li>
+                         <li><a href="{% url 'web:index' %}">Home</a></li>
+                         <li><a href="{% url 'web:about' %}">About Us</a></li>
+                         <li><a href="{% url 'web:brand' %}">Brands</a></li>
+                         <li><a href="{% url 'web:blog' %}">Blog</a></li>
+                         <li><a href="{% url 'web:contact' %}">Contact Us</a></li>
                       </ul>
                    </div>
                 </div>
@@ -123,7 +123,7 @@
           <div class="row vl-copyright1 _dv-top align-items-center">
              <div class="col-lg-6">
                 <div class="copyright-text left-side">
-                   <p>© 2025 Logistics Transportation. All Rights Reserved.</p>
+                   <p>© 2025 Speed And Safe. All Rights Reserved.</p>
                 </div>
              </div>
              <div class="col-lg-6">
