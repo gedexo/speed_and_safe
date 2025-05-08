@@ -17,3 +17,25 @@ class ContactAdmin(admin.ModelAdmin):
 class BlogAdmin(admin.ModelAdmin):
     list_display = ('title', 'date',)
     prepopulated_fields = {'slug': ('title',)}
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+    prepopulated_fields = {'slug': ('title',)}
+    search_fields = ('title',)
+    list_filter = ('title',)
+
+@admin.register(ProductEnquiry)
+class ProductEnquiryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'phone', 'product', 'quantity', 'message')
+    search_fields = ('name', 'email', 'phone', 'product')
+    list_filter = ('name', 'email', 'product')
+    ordering = ('-id',)
+
+@admin.register(Brand)
+class BrandAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(FAQ)
+class FAQAdmin(admin.ModelAdmin):
+    pass

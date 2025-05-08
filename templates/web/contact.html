@@ -35,7 +35,8 @@
        <div class="row">
           <div class="col-lg-7">
              <div class="contact1-form-area">
-                <form action="#">
+                <form id="contactForm" action="#" method="POST">
+                  {% csrf_token %}
                    
                     <div class="tab-content" id="pills-tabContent">
                       <div class="tab-pane fade show active" id="contact1-form1" role="tabpanel" aria-labelledby="contact1-form1-tab">
@@ -44,37 +45,38 @@
                                <div class="col-md-6">
                                   <div class="contact1-input nam-input">
                                      <label>Full Name*</label>
-                                     <input type="text" placeholder="Full Name*">
+                                     {{form.name}}
                                   </div>
                                </div>
                                <div class="col-md-6">
                                   <div class="contact1-input email-input">
                                      <label>Email Address*</label>
-                                     <input type="text" placeholder="info@ruhulexample.com">
+                                     {{form.email}}
                                   </div>
                                </div>
 
                                <div class="col-md-6">
                                   <div class="contact1-input Weight-input">
-                                     <label>Weight KG*</label>
-                                     <input type="number" placeholder="270 KG">
+                                     <label>Number*</label>
+                                     {{form.phone}}
                                   </div>
                                </div>
                                <div class="col-md-6">
                                   <div class="contact1-input desitance-input">
-                                     <label>Distance In (Kilometer)*</label>
-                                     <input type="text" placeholder="1800">
+                                     <label>Subject*</label>
+                                     {{form.subject}}
                                   </div>
                                </div>
                                <div class="col-md-12">
                                   <div class="contact1-input select-nice">
-                                     <label>Flight Type*</label>
-                                    <select class="wide">
-                                     <option value="1">Transport Type</option>
-                                    </select>
+                                     <label>Message*</label>
+                                     {{form.message}}
+                                  </div>
+                                  <div class="col-md-12">
+                                    <div class="cf-turnstile" data-sitekey="{{ turnstile_site_key }}"></div>
                                   </div>
                                   <div class="button">
-                                     <button class="theme-btn1 mt-30" type="submit"><span class="text">Request A Quote Now </span><span class="arrow-all"><span class="arrow1"><i class="fa-regular fa-arrow-right"></i></span><span class="arrow2"><i class="fa-regular fa-arrow-right"></i></span></span></button>
+                                     <button class="theme-btn1 mt-30" type="submit"><span class="text">Submit Form </span><span class="arrow-all"><span class="arrow1"><i class="fa-regular fa-arrow-right"></i></span><span class="arrow2"><i class="fa-regular fa-arrow-right"></i></span></span></button>
                                   </div>
                                </div>
 
@@ -140,3 +142,55 @@
   </div>
 
    {% endblock %}
+
+{% block js %}
+
+   <script>
+      $(document).ready(function() {
+          $("#contactForm").submit(function(event) {
+              event.preventDefault();
+              
+              var formData = $(this).serialize();  
+              
+              $.ajax({
+                  type: "POST",
+                  url: "{% url 'web:contact' %}",  
+                  data: formData,
+                  dataType: "json",
+                  success: function(response) {
+                      if (response.status === "true") {
+                          Swal.fire({
+                              icon: "success",
+                              title: response.title,
+                              text: response.message,
+                              confirmButtonText: "OK",
+                              showCancelButton: true,
+                              cancelButtonText: "WhatsApp",
+                          }).then((result) => {
+                              if (result.dismiss === Swal.DismissReason.cancel) {
+                                  window.open(response.whatsapp_url, "_blank");
+                              }
+                          });
+      
+                          $("#contactForm")[0].reset();  
+                      } else {
+                          Swal.fire({
+                              icon: "error",
+                              title: response.title,
+                              text: response.message,
+                          });
+                      }
+                  },
+                  error: function() {
+                      Swal.fire({
+                          icon: "error",
+                          title: "Submission Failed",
+                          text: "Something went wrong. Please try again later.",
+                      });
+                  }
+              });
+          });
+      });
+  </script>
+  
+{% endblock js %}

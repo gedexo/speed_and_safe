@@ -67,3 +67,95 @@
 .sidebar-area ._sidebar-widget._recent .recent-blog .recent-blog-post .content h4 a {
     font-size: var(--f-fs-font-15) !important;
 }
+.heading1 h4 a{
+    font-size: var(--f-fs-font-18) !important; 
+}
+.heading1 h2 {
+    font-size: var(--f-fs-font-34) !important; 
+}
+.contact1-form .contact1-input textarea{
+    background-color: var(--vtc-bg-common-4) !important;
+}
+.product-enquiry-section .contact1-form-area .form-title{
+    padding-bottom: 50px;
+    font-weight: 800;
+    font-size: x-large;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    
+}   
+.product-enquiry-section{
+    padding-bottom: 50px;
+}
+
+.brand-box .image img{
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #EBEBEB;
+    border-radius: 14px 14px 14px 14px;
+}
+
+.brand-box .image{
+    padding: 0 22px 22px 0;
+}
+
+.header1-bg .header-top-area::after {
+    right: -26px !important;
+    width: 104.9% !important;
+}
+.vl-blog-2-item .vl-blog-2-content h4 a{
+    font-size: var(--f-fs-font-18) !important; 
+}
+.vl-blog-2-item .vl-blog2-meta a {
+    font-size: 13px !important; 
+}
+.vl-blog-2-item .vl-blog2-meta a img{
+    margin-right: 5px !important;
+    height: 15px !important;
+}
+.theme-btn1 span.arrow-all {
+    height: 40px !important;
+    width: 40px !important;;
+    line-height: 40px !important;;
+}
+.vl-blog-2-item .vl-blog-2-thumb img {
+    height: 250px !important;
+    object-fit: cover !important;
+}
+.solutions4-single-slider .content-area {
+    height: 95px !important;
+}
+.solutions4-single-slider .content-area .content {
+    background: rgb(0 0 0 / 38%) !important;
+
+}
+.solutions4-single-slider .content-area {
+    bottom: -15px !important;
+    margin-left: 40px !important;
+    margin-right: 40px !important;
+}
+
+.solutions4-single-slider .content-area .top-area h4 a {
+    font-size: var(--f-fs-font-18) !important;
+}
+.solutions4-single-slider .image-area .image img{
+    object-fit: cover ;
+    height: 340px;
+}
+
+.delivery1-item-box2 .box-area .box h4 a {
+    font-size: var(--f-fs-font-18) !important;
+}
+.brand-slider-section .case5-single-slider .image-area .image {
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #EBEBEB;
+    border-radius: 14px 14px 14px 14px;
+}
+.header1-bg::before {
+    display: none !important;
+}
+.vl-logo img{
+    height: 100px !important;
+}

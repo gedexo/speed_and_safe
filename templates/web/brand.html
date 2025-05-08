@@ -1,0 +1,64 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+   <!--===== HERO AREA START =====-->
+
+   <div class="inner-hero bg-cover" style="background-image: url({% static 'web/assets/img/bg/inner-hero-bg.jpg' %});">
+    <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-6">
+              <div class="inner-heading">
+                  <h1>Brands</h1>
+                  <div class="breadcrumbs-pages">
+                      <ul>
+                         <li><a href="{% url 'web:index' %}">Home</a></li>
+                         <li class="angle"><i class="fa-solid fa-angle-right"></i></li>
+                         <li>Brands</li>
+                      </ul>
+                   </div>
+              </div>
+          </div>
+          
+      </div>
+    </div>
+    <div class="sec-shape">
+      <img src="{% static 'web/assets/img/shapes/inner-hero-shape.png' %}" alt="">
+    </div>
+ </div>
+
+ <!--===== HERO AREA START =====-->
+
+<!--===== Brand AREA START =====-->
+
+ <div class="work2 sp bg-cover brand-section" style="background-image: url({% static 'web/assets/img/bg/common-bg3.jpg' %});">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-12 m-auto">
+             <div class="heading1 text-center">
+                <span class="sub-title2" data-aos="fade-left" data-aos-duration="800">High standards in every product we offer.</span>
+                <h2 data-aos="fade-left" data-aos-duration="1000">Our Valued Brand Partners</h2>
+                <p>As your general wholesale food trading partner in GCC, we extend our sincere gratitude for choosing Hebron General Trading. We will certainly provide great maintenance standards in all our products and ever-increasing quality and delivery services.</p>
+             </div>
+          </div>
+       </div>
+       <div class="row mt-30">
+        {% for brand in brands %}
+          <div class="col-lg-2 col-md-3">
+             <div class="brand-box mt-30" data-aos="zoom-in-up" data-aos-duration="1300">
+                <div class="image">
+                   <img src="{{brand.image.url}}" alt="{{brand.title}}">
+                </div>
+             </div>
+          </div>
+          
+        {% endfor %}
+
+       </div>
+    </div>
+    
+ </div>
+
+ <!--===== Brand AREA END =====-->
+
+ {% endblock %}

@@ -356,6 +356,31 @@ if ($('.case5-slider').length) {
   });
 }
 
+if ($('.case5grid6-slider').length) {
+  const swiper10 = new Swiper('.case5grid6-slider', {
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 4000, // Auto slides every 4 seconds
+    },
+    navigation: {
+      nextEl: '.case5-next',
+      prevEl: '.case5-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 20
+      }
+    },
+  });
+}
+
 if ($('.team5-slider').length) {
   const swiper11 = new Swiper('.team5-slider', {
     loop: true,

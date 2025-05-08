@@ -1,0 +1,85 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+   <!--===== HERO AREA START =====-->
+
+   <div class="inner-hero bg-cover" style="background-image: url({% static 'web/assets/img/bg/inner-hero-bg.jpg' %});">
+      <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="inner-heading">
+                    <h1>Our Products</h1>
+                    <div class="breadcrumbs-pages">
+                        <ul>
+                           <li><a href="{% url 'web:index' %}">Home</a></li>
+                           <li class="angle"><i class="fa-solid fa-angle-right"></i></li>
+                           <li>Our Products</li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+      <div class="sec-shape">
+        <img src="{% static 'web/assets/img/shapes/inner-hero-shape.png' %}" alt="">
+      </div>
+   </div>
+
+   <!--===== HERO AREA START =====-->
+   
+   <!--===== SOLUTIONS AREA START =====-->
+
+   <div class="solutions1 sp">
+    <div class="container">
+      <div class="row">
+         {% for product in products %}
+           <div class="col-lg-4 col-md-6">
+             <div class="solutions-box">
+               <div class="image">
+                 <img src="{{ product.image.url }}" alt="{{ product.title }}">
+               </div>
+               <div class="content heading1">
+                 <div class="icon">
+                   <img src="{% static 'web/assets/img/icon/solutions1-icon1.png' %}" alt="">
+                 </div>
+                 <h4 class="uppercase mt-2"><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></h4>
+               </div>
+             </div>
+           </div>
+         {% empty %}
+           <p>No products available.</p>
+         {% endfor %}
+       </div>
+
+       <div class="space60"></div>
+       <div class="row">
+         <div class="col-12 m-auto">
+           <div class="theme-pagination text-center">
+             <ul>
+               {% if page_obj.has_previous %}
+                 <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa-solid fa-angle-left"></i></a></li>
+               {% endif %}
+       
+               {% for num in page_obj.paginator.page_range %}
+                 {% if page_obj.number == num %}
+                   <li><a class="active" href="?page={{ num }}">{{ num }}</a></li>
+                 {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                   <li><a href="?page={{ num }}">{{ num }}</a></li>
+                 {% endif %}
+               {% endfor %}
+       
+               {% if page_obj.has_next %}
+                 <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa-solid fa-angle-right"></i></a></li>
+               {% endif %}
+             </ul>
+           </div>
+         </div>
+       </div>
+
+    </div>
+ </div>
+
+ <!--===== SOLUTIONS AREA END =====-->
+
+{% endblock %}

@@ -1,0 +1,220 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+   <!--===== HERO AREA START =====-->
+
+   <div class="inner-hero bg-cover" style="background-image: url({% static 'web/assets/img/bg/inner-hero-bg.jpg' %});">
+      <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="inner-heading">
+                    <h1>Product</h1>
+                    <div class="breadcrumbs-pages">
+                        <ul>
+                           <li><a href="{% url 'web:index' %}">Home</a></li>
+                           <li class="angle"><i class="fa-solid fa-angle-right"></i></li>
+                           <li>Our Products</li>
+                           <li class="angle"><i class="fa-solid fa-angle-right"></i></li>
+                           <li>{{product.title}}</li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="sec-shape">
+        <img src="{% static 'web/assets/img/shapes/inner-hero-shape.png' %}" alt="">
+      </div>
+   </div>
+
+   <!--===== HERO AREA START =====-->
+
+   <!--===== BLOG DETAILS AREA START =====-->
+
+   <div class="blog-details-area sp">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 m-auto">
+                <div class="blog-details-content mr-30 md:mr-0 sm:mr-0 md:mt-30 sm:mt-30">
+                  <article>
+                     <div class="details-content">
+                        
+                         <div class="image mt-30">
+                            <img class="w-full" src="{{product.image.url}}" alt="">
+                         </div>
+
+                         <div class="heading1 mt-40">
+                           <h3>{{product.title}}</h3>
+                           <div class=" mt-16">{{product.description|safe}} </div>
+                        </div>
+
+                         
+                     </div>
+                  </article>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+   </div>
+
+   <!--===== BLOG DETAILS AREA END =====--> 
+
+   <!--===== Product Enquiry Start =====-->
+   <div class="contact1 bg-cover z-2 _relative product-enquiry-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8 m-auto">
+               <div class="contact1-form-area">
+                  <form class="theme-form mt-3" method="post" enctype="multipart/form-data" id="enquiryForm" data-slug="{{ product.slug }}">
+                     {% csrf_token %}
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="contact1-form1" role="tabpanel" aria-labelledby="contact1-form1-tab">
+                           <div class="contact1-form add-box-shadow">
+                              <h2 class="mx-auto form-title">Product Enquiry Form </h2>
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="contact1-input ">
+                                       <label>Full Name*</label>
+                                       {{form.name}}
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="contact1-input ">
+                                       <label>Email Address*</label>
+                                       {{form.email}}
+                                    </div>
+                                 </div>
+  
+                                 <div class="col-md-6">
+                                    <div class="contact1-input ">
+                                       <label>Number*</label>
+                                       {{form.phone}}
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="contact1-input ">
+                                       <label>Quantity*</label>
+                                       {{form.quantity}}
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <div class="contact1-input select-nice">
+                                       <label>Message*</label>
+                                       {{form.message}}
+                                    </div>
+                                    <div class="col-md-12">
+                                       <div class="cf-turnstile" data-sitekey="{{ turnstile_site_key }}"></div>
+                                    </div>
+                                    <div class="button">
+                                       <button class="theme-btn1 mt-30" type="submit"><span class="text">Submit Form </span><span class="arrow-all"><span class="arrow1"><i class="fa-regular fa-arrow-right"></i></span><span class="arrow2"><i class="fa-regular fa-arrow-right"></i></span></span></button>
+                                    </div>
+                                 </div>
+  
+                              </div>
+                           </div>
+                        </div>
+                        
+                      </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--===== Product Enquiry END =====-->
+
+   <!--===== SOLUTIONS AREA START =====-->
+   {% if other_products %}
+
+   <div class="solutions1 sp" style="background-color: #F6F6F6;">
+      <div class="container">
+         <div class="row">
+            <div class="heading1 text-center">
+               <h2>More Products</h2>
+            </div>
+         </div>
+         <div class="row mt-30">
+            {% for other_product in other_products %}
+               <div class="col-lg-4 col-md-6">
+                  <div class="solutions-box mt-30">
+                     <div class="image">
+                        <img src="assets/img/others/solutions1-image1.png" alt="">
+                     </div>
+                     <div class="content heading1">
+                        <div class="icon">
+                           <img src="assets/img/icon/solutions1-icon1.png" alt="">
+                        </div>
+                        <h4 class="uppercase mt-16"><a href="#">Land Freight</a></h4>
+                     </div>
+                  </div>
+               </div>
+            {% endfor %}
+         </div>
+  
+      </div>
+   </div>
+   {% endif %}
+  
+   <!--===== SOLUTIONS AREA END =====-->
+   
+{% endblock %}
+
+
+{% block js %}
+<script>
+    $(document).ready(function() {
+        $("#enquiryForm").submit(function(event) {
+            event.preventDefault(); 
+
+            var formData = new FormData(this);
+            var careerSlug = $("#enquiryForm").data("slug");
+
+            $.ajax({
+                type: "POST",
+                url: `/product/${careerSlug}/`,
+                data: formData,
+                processData: false,
+                contentType: false,  
+                dataType: "json",
+                success: function(response) {
+                    if (response.status === "true") {
+                        Swal.fire({
+                            icon: "success",
+                            title: response.title,
+                            text: response.message,
+                            confirmButtonText: "OK",
+                            showCancelButton: true,
+                            cancelButtonText: "WhatsApp",
+                        }).then((result) => {
+                            if (result.dismiss === Swal.DismissReason.cancel) {
+                                window.open(response.whatsapp_url, "_blank");
+                            }
+                        });
+
+                        $("#careerform")[0].reset();  
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            title: response.title,
+                            text: response.message,
+                        });
+                    }
+                },
+                error: function(xhr) {
+                    console.log("Error Response:", xhr.responseText);
+                    Swal.fire({
+                        icon: "error",
+                        title: "Submission Failed",
+                        text: "Something went wrong. Please try again later.",
+                    });
+                }
+            });
+        });
+    });
+</script>
+{% endblock js %}
