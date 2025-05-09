@@ -68,7 +68,8 @@
     font-size: var(--f-fs-font-15) !important;
 }
 .heading1 h4 a{
-    font-size: var(--f-fs-font-18) !important; 
+    font-size: var(--f-fs-font-16) !important; 
+    padding-top: 10px;
 }
 .heading1 h2 {
     font-size: var(--f-fs-font-34) !important; 
@@ -89,16 +90,20 @@
     padding-bottom: 50px;
 }
 
-.brand-box .image img{
+.brand-box .image{
     border-style: solid;
     border-width: 1px 1px 1px 1px;
     border-color: #EBEBEB;
     border-radius: 14px 14px 14px 14px;
+    padding: 10px 10px 10px 10px;
+}
+.brand-box .image img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
-.brand-box .image{
-    padding: 0 22px 22px 0;
-}
 
 .header1-bg .header-top-area::after {
     right: -26px !important;
@@ -127,8 +132,7 @@
     height: 95px !important;
 }
 .solutions4-single-slider .content-area .content {
-    background: rgb(0 0 0 / 38%) !important;
-
+    background: rgb(255 255 255) !important;
 }
 .solutions4-single-slider .content-area {
     bottom: -15px !important;
@@ -138,6 +142,7 @@
 
 .solutions4-single-slider .content-area .top-area h4 a {
     font-size: var(--f-fs-font-18) !important;
+    color: black !important;
 }
 .solutions4-single-slider .image-area .image img{
     object-fit: cover ;
@@ -158,4 +163,122 @@
 }
 .vl-logo img, .vl-footer-logo img{
     height: 80px !important;
+}
+.theme-btn1 span.text, .theme-btn3 {
+    text-transform: none !important;
+}
+.preloader img{
+    height: auto !important;
+    width: auto !important ;
+}
+.case5-slider-btns button {
+    height: 40px !important;
+    width: 40px !important;
+    color: #ffffff !important;
+}
+.solutions4-slider-btns button{
+    height: 40px !important;
+    width: 40px !important;   
+    color: #ffffff !important;
+}
+
+.contact-page-box {
+    padding: 16px !important;
+}
+
+@media(max-width: 991px){
+    .hero5-area{
+        height: 480px !important;
+    }
+    .hero5-heading h1{
+        font-size: var(--f-fs-font-28) !important;
+    }
+    .hero5-heading .sub-title{
+        right: 16px !important;
+        font-size: 10px !important;
+    }
+    .hero5-area .hero5-heading {
+        padding-top: 150px !important;
+    }
+    .hero5-slider-btns{
+        display: none !important ;
+    }
+    .heading1 h2 {
+        font-size: var(--f-fs-font-26) !important;
+    }
+    .heading1 .sub-title2 {
+        font-size: var(--f-fs-font-15) !important;
+    }
+    .blog2 {
+        padding: 50px 0px 80px 0px !important;
+    }
+    .inner-hero {
+        min-height: 250px !important;
+    }
+    .inner-hero {
+        padding-top: 110px !important;
+    }
+    .inner-hero .inner-heading h1 {
+        font-size: var(--f-fs-font-32) !important;
+    }
+    .about2-images {
+        position: relative;
+        height: 520px !important;
+    }
+    .contact1-images {
+        height: 560px !important;
+    }
+    .case5-slider-btns{
+        display: none !important;
+    }
+    .delivery1-images{
+        height: 520px !important;
+    }
+    .inner-hero .inner-heading .breadcrumbs-pages ul li {
+        font-size: var(--f-fs-font-16) !important;
+    }
+    .sidebar-area{
+        padding-top: 50px !important;
+    }
+    .vl-copyright1 .copyright-text p, .vl-copyright1 .copyright-text a{
+        font-size: var(--f-fs-font-15) !important;
+    }
+    
+}
+.vl-footer-widget .vl-footer-address p{
+    color: var(--vtc-text-pera1);
+    font-size: var(--f-fs-font-18);
+    font-style: normal;
+    font-weight: var(--f-fw-medium);
+    line-height: var(--f-fs-font-26);
+    padding: 12px 0px;
+    display: inline-block;
+    transition: all 0.4s;
+}
+.vl-footer-widget .vl-footer-address a{
+    color: var(--vtc-text-pera1);
+    font-size: var(--f-fs-font-18);
+    font-style: normal;
+    font-weight: var(--f-fw-medium);
+    line-height: var(--f-fs-font-26);
+    padding: 5px 0px;
+    display: inline-block;
+    transition: all 0.4s;
+}
+.vl-blog-1-item .vl-blog-1-thumb img {
+    height: 190px !important;
+    object-fit: cover !important;
+}
+.solutions-box .image img {
+    height: 300px !important;
+    object-fit: cover !important;
+}
+.solutions-box {
+    padding: 24px 24px 22px 24px !important;
+}
+.sp {
+    padding: 50px 0px !important;
+}
+.contact1 .contact1-images .image1 img{
+    border-radius: 20px !important;
 }

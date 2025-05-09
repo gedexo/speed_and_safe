@@ -362,12 +362,13 @@ if ($('.case5grid6-slider').length) {
     centeredSlides: true,
     spaceBetween: 30,
     autoplay: {
-      delay: 4000, // Auto slides every 4 seconds
+      delay: 4000, 
     },
     navigation: {
       nextEl: '.case5-next',
       prevEl: '.case5-prev',
     },
+    slidesPerView: 3,
     breakpoints: {
       768: {
         slidesPerView: 4,

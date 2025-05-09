@@ -10,13 +10,13 @@
                 
                 <div class="col-lg-6">
                    <div class="header-top-info d-flex">
-                      <p><img src="/static/web/assets/img/icon/header-top-icon1.svg" alt=""> Kerala, India</p>
-                      <p class="add-after"><img src="/static/web/assets/img/icon/header-top-icon2.svg" alt=""> 8:00 AM To 10:00 PM</p>
+                      <p><img src="/static/web/assets/img/icon/header-top-icon1.svg" alt=""> 96493, Dubai, U.A.E</p>
+                      <p class="add-after"><img src="/static/web/assets/img/icon/team-details-icon1.svg" alt=""> +971 50 984 6948</p>
                    </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                    <div class="header-top-info text-end">
-                      <a href="mailto:speedandsafe@gmail.com"><img src="/static/web/assets/img/icon/header-top-icon3.svg" alt=""> speedandsafe@gmail.com</a>
+                      <a href="mailto:info@speedandsafetrading.com"><img src="/static/web/assets/img/icon/header-top-icon3.svg" alt="">info@speedandsafetrading.com</a>
                    </div>
                 </div>
              </div>
@@ -32,27 +32,27 @@
                    <div class="vl-main-menu">
                       <nav class="vl-mobile-menu-active">
                             <ul>
-                               <li class="has-dropdown">
+                               <li class="">
                                   <a href="{% url 'web:index' %}">Home <span></span></a>
                                </li>
 
-                              <li class="has-dropdown">
+                              <li class="">
                                  <a href="{% url 'web:about' %}">About <span></span></a>
                               </li>
                               
-                              <li class="has-dropdown">
+                              <li class="">
                                  <a href="{% url 'web:brand' %}">Brands <span></span></a>
                               </li>
 
-                              <li class="has-dropdown">
+                              <li class="">
                                  <a href="{% url 'web:product' %}">Products <span></span></a>
                               </li>
 
-                              <li class="has-dropdown">
+                              <li class="">
                                  <a href="{% url 'web:blog' %}">Blogs <span></span></a>
                               </li>
 
-                              <li class="has-dropdown">
+                              <li class="">
                                  <a href="{% url 'web:contact' %}">Contact <span></span></a>
                               </li>
                               
@@ -66,14 +66,15 @@
                 <div class="col-lg-3 col-md-6 col-6">
                    <div class="vl-header1-btns text-end d-none d-lg-block">
                       <div class="buttons">
-                         <div class="vl-search-top">
-                            <button class="search-open-btn"><i class="fa-regular fa-magnifying-glass"></i></button>
-                         </div>
+                         
                          <div class="header-contact-number">
-                            <div class="phone-icon">
+                            {% comment %} <div class="phone-icon">
                                <img src="/static/web/assets/img/icon/header-call-icon.svg" alt="">
                             </div>
-                            <a href="tel:234345-4574">(234) 345-4574</a>
+                            <a href="tel:234345-4574">(234) 345-4574</a> {% endcomment %}
+                            <div class="button" data-aos-duration="1400">
+                              <a class="theme-btn1" href="{% url 'web:contact' %}"><span class="text">Get a Quote</span></a>
+                           </div>
                          </div>
                       </div>
                    </div>

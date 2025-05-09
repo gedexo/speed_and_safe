@@ -21,9 +21,7 @@
             
         </div>
       </div>
-      <div class="sec-shape">
-        <img src="{% static 'web/assets/img/shapes/inner-hero-shape.png' %}" alt="">
-      </div>
+      
    </div>
 
    <!--===== HERO AREA START =====-->
@@ -40,9 +38,9 @@
                  <img src="{{ product.image.url }}" alt="{{ product.title }}">
                </div>
                <div class="content heading1">
-                 <div class="icon">
+                 {% comment %} <div class="icon">
                    <img src="{% static 'web/assets/img/icon/solutions1-icon1.png' %}" alt="">
-                 </div>
+                 </div> {% endcomment %}
                  <h4 class="uppercase mt-2"><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></h4>
                </div>
              </div>

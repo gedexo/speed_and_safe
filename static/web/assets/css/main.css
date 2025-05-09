@@ -1440,7 +1440,7 @@ a:focus {
   --vtc-bg-common-2: #D0D7E0;
   --vtc-bg-common-3: #BACAE0;
   --vtc-bg-common-4: #F0F1F1;
-  --vtc-bg-common-5: #F6D8D2;
+  --vtc-bg-common-5: #D0D7E0;
   --vtc-bg-common-6: #F6F6F6;
   --vtc-bg-white: #ffffff;
   --vtc-bg-white10per: rgba(255, 255, 255, 0.1);
@@ -12308,6 +12308,12 @@ a:focus {
 }
 .contact1-form .desitance-input::after {
   background-image: url(../img/icon/form-location-icon.svg);
+}
+.contact1-form .phone-input::after {
+  background-image: url(../img/icon/header-call-icon.svg);
+}
+.contact1-form .sub-input::after {
+  background-image: url(../img/icon/service2-icon1.svg);
 }
 
 .contact1-form .contact1-input {

@@ -22,9 +22,7 @@
             
         </div>
       </div>
-      <div class="sec-shape">
-        <img src="{% static 'web/assets/img/shapes/inner-hero-shape.png' %}" alt="">
-      </div>
+      
    </div>
 
    <!--===== HERO AREA START =====-->
@@ -47,7 +45,7 @@
                               <img src="{% static 'web/assets/img/icon/date-icon1.svg' %}" alt="">{{ blog.date }}
                            </a>
                         </div>
-                        <h4><a href="{{ blog.get_absolute_url }}" class="blog-title">{{ blog.title }}</a></h4>
+                        <h4><a href="{{ blog.get_absolute_url }}" class="blog-title">{{ blog.title|truncatechars:65 }}</a></h4>
                         <p class="mt-16">{{ blog.description|safe|truncatechars:100 }}</p>
                   </div>
                </div>
@@ -97,31 +95,37 @@
 
  <!--===== SOLUTIONS AREA END =====-->
 
-   <!--===== CTA AREA START =====-->
+ <script>
+   window.addEventListener('load', function() {
+      const cards = document.querySelectorAll('.vl-blog-1-item');
+      let maxHeight = 0;
 
-   <div class="cta1 bg-cover" style="background-image: url({% static 'web/assets/img/bg/cta1-bg.jpg' %});">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-6">
-               <div class="white-heading">
-                  <h2>Empowering Your Business Of Efficient Transportation</h2>
-                  <p class="mt-16">At Logicx Logistics And Transportation, we understand that today’s fast-paced world, efficiency is key to the success.</p>
-                  <div class="button mt-30">
-                    <a class="theme-btn4" href="service.html">Request Logistics Support</a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-6">
-               <div class="cta1-image">
-                  <img src="{% static 'web/assets/img/cta/cta1-image.png' %}" alt="">
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="cta1-shape">
-         <img src="{% static 'web/assets/img/shapes/cta1-shape.png' %}" alt="">
-      </div>
-   </div>
+      cards.forEach(card => {
+         card.style.height = 'auto';
+         if (card.offsetHeight > maxHeight) {
+            maxHeight = card.offsetHeight;
+         }
+      });
 
-   <!--===== CTA AREA END =====-->
+      cards.forEach(card => {
+         card.style.height = maxHeight + 'px';
+      });
+   });
+
+   window.addEventListener('resize', function() {
+      const cards = document.querySelectorAll('.vl-blog-1-item');
+      let maxHeight = 0;
+
+      cards.forEach(card => {
+         card.style.height = 'auto';
+         if (card.offsetHeight > maxHeight) {
+            maxHeight = card.offsetHeight;
+         }
+      });
+
+      cards.forEach(card => {
+         card.style.height = maxHeight + 'px';
+      });
+   });
+</script>
 {% endblock %}

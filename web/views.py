@@ -12,7 +12,7 @@ from .forms import ContactForm, ProductEnquiryForm
 
 def index(request):
     banners = Banner.objects.all()
-    blogs = Blog.objects.all()
+    blogs = Blog.objects.all()[:3]
     products = Product.objects.all()
     faqs = FAQ.objects.all()
     brands = Brand.objects.all()
@@ -86,7 +86,7 @@ def product_detail(request, slug):
                     f'Message: {enquiry.message}\n'
                 )
                 from_email = enquiry.email
-                recipient_list = ["midljarhaman016@gmail.com"]
+                recipient_list = ["info@speedandsafetrading.com"]
 
                 email = EmailMessage(subject, message, from_email, recipient_list)
                 email.send(fail_silently=False)
@@ -100,7 +100,7 @@ def product_detail(request, slug):
                     f"Quantity: {enquiry.quantity}%0A"
                     f"Message: {enquiry.message}"
                 )
-                whatsapp_url = f"https://wa.me/+919037126305?text={whatsapp_text}"
+                whatsapp_url = f"https://wa.me/+971509846948?text={whatsapp_text}"
 
                 return JsonResponse({
                     "status": "true",
@@ -185,7 +185,7 @@ def contact(request):
                     f'Message: {data.message}\n'
                 )
                 from_email = data.email
-                recipient_list = ["midlajrahman016@gmail.com"]
+                recipient_list = ["info@speedandsafetrading.com"]
                 send_mail(subject, message, from_email, recipient_list, fail_silently=False)
 
                 # WhatsApp Message
@@ -196,7 +196,7 @@ def contact(request):
                     f"Subject: {data.subject}%0A"
                     f"Message: {data.message}"
                 )
-                whatsapp_url = f"https://wa.me/+919037126305?text={whatsapp_message}" 
+                whatsapp_url = f"https://wa.me/+971509846948?text={whatsapp_message}" 
 
                 response_data = {
                     "status": "true",

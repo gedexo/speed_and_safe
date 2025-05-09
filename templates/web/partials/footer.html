@@ -21,7 +21,7 @@
                    </div>
                 </div>
              </div>
-             <div class="col-lg-2  col-md-6 col-6">
+             <div class="col-lg-2 col-md-6 col-6">
                 <div class="vl-footer-widget mb-50 ml-0 md:ml-30 sm:ml-0">
                    <h4>Quick Links</h4>
                    <div class="vl-footer-list">
@@ -38,81 +38,35 @@
  
              <div class="col-lg-3 col-md-4 col-6">
                 <div class="vl-footer-widget ml-40 mb-50 md:ml-0 sm:ml-0">
-                   <h4>Category List</h4>
+                   <h4>Popular Products</h4>
                    <div class="vl-footer-list">
                       <ul>
-                         <li><a href="#">Digital Marketing</a></li>
-                         <li><a href="#">SEO Marketing</a></li>
-                         <li><a href="#">Startup Agency</a></li>
-                         <li><a href="#">Advertising Agency</a></li>
-                         <li><a href="#">Social Media Agency</a></li>
-                         <li><a href="#">Web Design Agency</a></li>
+                        {% for product in footer_products %}
+                         <li><a href="{{product.get_absolute_url}}">{{product.title|truncatechars:20}}</a></li>
+                         {% endfor %}
                       </ul>
                    </div>
                 </div>
              </div>
  
              <div class="col-lg-3 col-md-8 col-sm-6">
-                <div class="vl-footer-recent-project vl-footer-widget">
-                   <h4>Our Latest Project</h4>
-                   <div class="row">
-                      <div class="col-4">
-                         <div class="footer-single-recent-post">
-                            <div class="image">
-                               <img src="{% static 'web/assets/img/footer/footer-recent-post1.png' %}" alt="">
-                            </div>
-                            <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                         </div>
-                      </div>
- 
-                      <div class="col-4">
-                         <div class="footer-single-recent-post">
-                            <div class="image">
-                               <img src="{% static 'web/assets/img/footer/footer-recent-post2.png' %}" alt="">
-                            </div>
-                            <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                         </div>
-                      </div>
- 
-                      <div class="col-4">
-                         <div class="footer-single-recent-post">
-                            <div class="image">
-                               <img src="{% static 'web/assets/img/footer/footer-recent-post3.png' %}" alt="">
-                            </div>
-                            <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                         </div>
-                      </div>
- 
-                      <div class="col-4">
-                         <div class="footer-single-recent-post">
-                            <div class="image">
-                               <img src="{% static 'web/assets/img/footer/footer-recent-post4.png' %}" alt="">
-                            </div>
-                            <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                         </div>
-                      </div>
- 
-                      <div class="col-4">
-                         <div class="footer-single-recent-post">
-                            <div class="image">
-                               <img src="{% static 'web/assets/img/footer/footer-recent-post5.png' %}" alt="">
-                            </div>
-                            <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                         </div>
-                      </div>
- 
-                      <div class="col-4">
-                         <div class="footer-single-recent-post">
-                            <div class="image">
-                               <img src="{% static 'web/assets/img/footer/footer-recent-post6.png' %}" alt="">
-                            </div>
-                            <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
-                         </div>
-                      </div>
- 
-                   </div>
-                </div>
-             </div>
+               <div class="vl-footer-recent-project vl-footer-widget">
+                  <h4>Connect Us</h4>
+                  <div class="row">
+                        <div class="col-12 vl-footer-address">
+                           <p><strong>Address:</strong><br>
+                              96493, Dubai, U.A.E</p>
+
+                           <p><strong>Phone:</strong><br>
+                           <a href="tel:+971 50 984 6948">+971 50 984 6948</a>, 
+                           <a href="tel:+971 56 140 2818">+971 56 140 2818</a></p>
+
+                           <p><strong>Email:</strong><br>
+                           <a href="mailto:info@speedandsafetrading.com"> info@speedandsafetrading.com</a></p>
+                        </div>
+                  </div>
+               </div>
+            </div>
           </div>
        </div>
     </div>
@@ -120,18 +74,13 @@
  
     <!-- copy-right area start -->
        <div class="container">
-          <div class="row vl-copyright1 _dv-top align-items-center">
+          <div class="row vl-copyright1 _dv-top align-items-center justify-content-center">
              <div class="col-lg-6">
-                <div class="copyright-text left-side">
-                   <p>© 2025 Speed And Safe. All Rights Reserved.</p>
+                <div class="copyright-text text-center">
+                   <p>Copyright {% now 'Y' %}, All Right reserved by <a href="https://gedexo.com/" target="_blank"> Gedexo Technologies LLP.</a></p>
                 </div>
              </div>
-             <div class="col-lg-6">
-                <div class="copyright-text right-side text-end sm:text-start md:text-start">
-                   <a href="#">Privacy Policy</a>
-                   <a href="#" class="add-before"> Disclaimer </a>
-                </div>
-             </div>
+             
           </div>
        </div>
     <!-- copy-right area end -->
