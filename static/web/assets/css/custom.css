@@ -204,7 +204,8 @@
         display: none !important ;
     }
     .heading1 h2 {
-        font-size: var(--f-fs-font-26) !important;
+        font-size: var(--f-fs-font-22) !important;
+        line-height: normal;
     }
     .heading1 .sub-title2 {
         font-size: var(--f-fs-font-15) !important;
@@ -219,11 +220,11 @@
         padding-top: 110px !important;
     }
     .inner-hero .inner-heading h1 {
-        font-size: var(--f-fs-font-32) !important;
+        font-size: var(--f-fs-font-28) !important;
     }
     .about2-images {
         position: relative;
-        height: 520px !important;
+        /* height: 520px !important; */
     }
     .contact1-images {
         height: 560px !important;
@@ -277,7 +278,7 @@
     padding: 24px 24px 22px 24px !important;
 }
 .sp {
-    padding: 50px 0px !important;
+    padding: 30px 0px !important;
 }
 .contact1 .contact1-images .image1 img{
     border-radius: 20px !important;
@@ -291,3 +292,35 @@
 .about4 .about4-images .image2 img{
     border-radius: 20px !important;
 }
+.brand-slider-section{
+    background: #d3d3d35c;
+}
+@media screen and (max-width: 769px) {
+    .vl-footer-widget h4 {
+      font-size: var(--f-fs-font-19);
+    }
+    .about4-images {
+        height: 450px;
+        position: relative;
+    }
+    .inner-hero .inner-heading .breadcrumbs-pages {
+        padding-top: 15px;
+    }
+    .about2 .about2-images .image1 img {
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+    }
+    .blogSwiper {
+        width: 100%;
+        overflow: hidden;
+     }
+     .solutions4-slider {
+        width: 100%;
+        overflow: hidden;
+      }
+      .case5grid6-slider {
+        width: 100%;
+        overflow: hidden;
+      }

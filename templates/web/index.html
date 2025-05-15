@@ -42,7 +42,50 @@
    </div>
 
    <!--===== HERO AREA START =====-->
+<!--===== Brand AREA START =====-->
 
+<div class="case-study5 sp brand-slider-section" >
+   <div class="container">
+      <div class="row align-items-center align-items-center">
+         <div class="col-lg-6">
+            <div class="heading1">
+               <span class="sub-title2 left-side" data-aos="fade-left" data-aos-duration="800">Brands</span>
+               <h2 data-aos="fade-left" data-aos-duration="1200">Our Popular Brands</h2>
+            </div>
+         </div>
+         <div class="col-lg-6">
+            <div class="case5-slider-btns text-end md:text-start sm:text-start md:mt-30 sm:mt-30" data-aos="fade-right" data-aos-duration="800">
+               <button class="custom-button case5-next"><i class="fas fa-chevron-left"></i></button>
+               <button class="custom-button case5-prev"><i class="fas fa-chevron-right"></i></button>
+             </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="case5-slider case5grid6-slider  _relative mt-40" data-aos="fade-up" data-aos-duration="900">
+               <div class="swiper-wrapper">
+                  {% for brand in brands %}
+                  <div class="swiper-slide">
+                     <div class="case5-single-slider">
+                        <div class="image-area">
+                           <div class="image">
+                              <img src="{{brand.image.url}}" alt="">
+                           </div>
+                        </div>
+                        
+                     </div>
+                  </div>
+                  {% endfor%}
+                  
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!--===== brand AREA END =====-->
    <!--===== ABOUT AREA START =====-->
 
   <div class="about4 sp">
@@ -53,9 +96,10 @@
                    <div class="image1" data-aos="zoom-out" data-aos-duration="800">
                        <img src="{% static 'web/assets/img/about/about4-image1.png' %}" alt="">
                    </div>
-                   <div class="image2" data-aos="zoom-out" data-aos-duration="1000">
-                       <img src="{% static 'web/assets/img/about/about4-image2.png' %}" alt="">
-                   </div>
+                   <div class="image2 d-none d-md-block" data-aos="zoom-out" data-aos-duration="1000">
+                     <img src="{% static 'web/assets/img/about/about4-image2.png' %}" alt="">
+                 </div>
+                 
                    <div class="about4-image-text" data-aos="zoom-out" data-aos-duration="800">
                        <h3>15,360</h3>
                        <p>Clients Worldwide</p>
@@ -91,7 +135,7 @@
                </div>
             </div>
          </div>
-         <div class="row mt-30">
+         <div class="row mt-20">
             <div class="col-lg mt-30">
                <div class="delivery1-item-box2">
                   {% comment %} <div class="icon text-end mr-30">
@@ -183,50 +227,7 @@
 
    <!--===== DELIVERY AREA END =====-->
 
-<!--===== Brand AREA START =====-->
 
-<div class="case-study5 sp brand-slider-section" >
-   <div class="container">
-      <div class="row align-items-center align-items-center">
-         <div class="col-lg-6">
-            <div class="heading1">
-               <span class="sub-title2 left-side" data-aos="fade-left" data-aos-duration="800">Brands</span>
-               <h2 data-aos="fade-left" data-aos-duration="1200">Our Popular Brands</h2>
-            </div>
-         </div>
-         <div class="col-lg-6">
-            <div class="case5-slider-btns text-end md:text-start sm:text-start md:mt-30 sm:mt-30" data-aos="fade-right" data-aos-duration="800">
-               <button class="custom-button case5-next"><i class="fas fa-chevron-left"></i></button>
-               <button class="custom-button case5-prev"><i class="fas fa-chevron-right"></i></button>
-             </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-lg-12">
-            <div class="case5-slider case5grid6-slider  _relative mt-60" data-aos="fade-up" data-aos-duration="900">
-               <div class="swiper-wrapper">
-                  {% for brand in brands %}
-                  <div class="swiper-slide">
-                     <div class="case5-single-slider">
-                        <div class="image-area">
-                           <div class="image">
-                              <img src="{{brand.image.url}}" alt="">
-                           </div>
-                        </div>
-                        
-                     </div>
-                  </div>
-                  {% endfor%}
-                  
-
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-
-<!--===== brand AREA END =====-->
 
 
    <!--===== FAQ AREA START =====-->
@@ -337,26 +338,37 @@
             </div>
          </div>
       </div>
-      <div class="row mt-30">
-
-         {% for blog in blogs %}
-         <div class="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration="800">
-            <div class="vl-blog-2-item mt-30">
-               <div class="vl-blog-2-thumb">
-                  <img class="w-full" src="{{blog.image.url}}" alt="{{blog.title}}">
-               </div>
-               <div class="vl-blog-2-content">
-                  <div class="vl-blog2-meta">
-                     <a href="#" class="date"><img src="{% static 'web/assets/img/icon/date-icon1.svg' %}" alt="">{{blog.date}}</a>
+      <div class="swiper blogSwiper mt-30">
+         <div class="swiper-wrapper">
+      
+            {% for blog in blogs %}
+            <div class="swiper-slide">
+               <div class="vl-blog-2-item">
+                  <div class="vl-blog-2-thumb">
+                     <img class="w-full" src="{{ blog.image.url }}" alt="{{ blog.title }}">
                   </div>
-                  <h4><a href="{{blog.get_absolute_url}}" class="blog-title">{{blog.title|truncatechars:50}}</a></h4>
-                  <a class="theme-btn1 mt-24" href="{{blog.get_absolute_url}}"><span class="text">Read More </span><span class="arrow-all"><span class="arrow1"><i class="fa-regular fa-arrow-right"></i></span><span class="arrow2"><i class="fa-regular fa-arrow-right"></i></span></span></a>
+                  <div class="vl-blog-2-content">
+                     <div class="vl-blog2-meta">
+                        <a href="#" class="date">
+                           <img src="{% static 'web/assets/img/icon/date-icon1.svg' %}" alt="">{{ blog.date }}
+                        </a>
+                     </div>
+                     <h4>
+                        <a href="{{ blog.get_absolute_url }}" class="blog-title">{{ blog.title|truncatechars:50 }}</a>
+                     </h4>
+                     <a class="theme-btn1 mt-24" href="{{ blog.get_absolute_url }}">
+                        <span class="text">Read More </span>
+                        <span class="arrow-all">
+                           <span class="arrow1"><i class="fa-regular fa-arrow-right"></i></span>
+                           <span class="arrow2"><i class="fa-regular fa-arrow-right"></i></span>
+                        </span>
+                     </a>
+                  </div>
                </div>
             </div>
+            {% endfor %}
+      
          </div>
-         {% endfor %}
-
-      </div>
    </div>
   
 </div>
@@ -366,3 +378,34 @@
 
 
 {% endblock %}
+
+
+{% block js %}
+<script>
+   window.onload = function () {
+      const swiper = new Swiper('.blogSwiper', {
+         slidesPerView: 1,
+         spaceBetween: 30,
+         loop: true,
+         navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+         },
+         pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+         },
+         breakpoints: {
+            768: {
+               slidesPerView: 2,
+            },
+            992: {
+               slidesPerView: 3,
+            }
+         }
+      });
+   };
+</script>
+
+
+{% endblock js %}

@@ -1436,6 +1436,7 @@ a:focus {
   --vtc-text-white80per: rgba(255, 255, 255, 0.8274509804);
   --vtc-text-white70per: rgba(255, 255, 255, 0.6901960784);
   --vtc-bg-main1: #2661AD;
+  --vtc-bg-main2: #4abb4e;
   --vtc-bg-common-1: #EAEEF1;
   --vtc-bg-common-2: #D0D7E0;
   --vtc-bg-common-3: #BACAE0;
@@ -1584,7 +1585,7 @@ a:focus {
 }
 .heading1 .sub-title2 {
   display: inline-block;
-  color: var(--vtc-text-title1);
+  color: var(--vtc-bg-main2);
   font-size: var(--f-fs-font-18);
   font-style: normal;
   font-weight: var(--f-fw-semibold);
@@ -1624,7 +1625,7 @@ a:focus {
 }
 .heading1 .sub-title3 {
   display: inline-block;
-  color: var(--vtc-bg-main1);
+  color: var(--vtc-bg-main2);
   font-size: var(--f-fs-font-18);
   font-style: normal;
   font-weight: var(--f-fw-semibold);
@@ -2386,7 +2387,7 @@ a:focus {
 }
 .theme-btn1:hover span {
   transition: all 0.4s;
-  background-color: var(--vtc-text-title1);
+  background-color: var(--vtc-bg-main2);
 }
 .theme-btn1:hover .arrow-all {
   transform: translateX(3px);
@@ -2502,7 +2503,7 @@ a:focus {
   right: 0;
   height: 100%;
   width: 0%;
-  background-color: var(--vtc-text-title1);
+  background-color: var(--vtc-bg-main2);
   border-radius: 25px;
   z-index: -1;
   transition: all 0.4s;
@@ -3557,7 +3558,7 @@ a:focus {
 }
 .hero5-heading .sub-title {
   display: inline-block;
-  color: var(--vtc-bg-main1);
+  color: var(--vtc-bg-main2);
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -3615,7 +3616,7 @@ a:focus {
 @media (max-width: 767px) {
   .hero5-heading h1 {
     font-size: var(--f-fs-font-40);
-    line-height: var(--f-fs-font-48);
+    line-height: var(--f-fs-font-40);
   }
 }
 .hero5-heading p {
@@ -3752,7 +3753,7 @@ a:focus {
 }
 .hero5-slider-btns button:hover {
   transition: all 0.4s;
-  background-color: var(--vtc-text-title1);
+  background-color: var(--vtc-bg-main2);
 }
 .hero5-slider-btns .swiper-button-prev {
   position: absolute;
@@ -6317,7 +6318,7 @@ a:focus {
 }
 .vl-footer-widget .vl-footer-list ul li a {
   color: var(--vtc-text-pera1);
-  font-size: var(--f-fs-font-18);
+  font-size: var(--f-fs-font-16);
   font-style: normal;
   font-weight: var(--f-fw-medium);
   line-height: var(--f-fs-font-18); /* 100% */
@@ -7328,7 +7329,7 @@ a:focus {
 
 .about2-images {
   position: relative;
-  height: 590px;
+  /* height: 590px; */
 }
 .about2-images .image2 {
   position: absolute;
@@ -11731,7 +11732,7 @@ a:focus {
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  padding: 20px;
+  padding: 10px;
   transition: all 0.4s;
 }
 .solutions4-single-slider .content-area .content p {
@@ -11801,7 +11802,7 @@ a:focus {
   width: 60px;
   border-radius: 50%;
   border: none;
-  background: var(--vtc-bg-common-5);
+  background: var(--vtc-bg-main2);
   color: var(--vtc-bg-main1);
   transition: all 0.4s;
   margin-left: 10px;
@@ -13042,7 +13043,6 @@ a:focus {
   transition: all 0.4s;
   transform: rotateY(180deg);
 }
-
 /*
 ::::::::::::::::::::::::::
  FEATURES AREA CSS
