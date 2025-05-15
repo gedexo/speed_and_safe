@@ -47,8 +47,23 @@ class Blog(models.Model):
         verbose_name = "Blog"
         verbose_name_plural = "Blogs"
 
-    
+class Category(models.Model):
+    title = models.CharField(max_length=180)
+    slug = models.SlugField()
+    image = models.ImageField(upload_to="category/")
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
+
+
 class Product(models.Model):
+    brand = models.ForeignKey("web.Brand", on_delete=models.CASCADE, related_name='products', blank=True, null=True)
+    category = models.ForeignKey("web.Category", on_delete=models.CASCADE, related_name='products', blank=True, null=True)
+
     title = models.CharField(max_length=180)
     slug = models.SlugField()
     image = models.ImageField(upload_to="product/")
