@@ -44,9 +44,11 @@
          {% for brand in brands %}
            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
              <div class="brand-box mt-30" data-aos="zoom-in-up" data-aos-duration="1300">
+               <a href="{% url 'web:product' %}?brand={{ brand.slug }}">
                <div class="image">
                  <img src="{{brand.image.url}}" alt="{{brand.title}}">
                </div>
+            </a>
              </div>
            </div>
          {% endfor %}

@@ -37,9 +37,13 @@ def brand(request):
 
 
 def product(request):
-    product_list = Product.objects.all()
-    paginator = Paginator(product_list, 9)
+    brand_slug = request.GET.get('brand')
+    if brand_slug:
+        products = Product.objects.filter(brand__slug=brand_slug)
+    else:
+        products = Product.objects.all()
 
+    paginator = Paginator(products, 9)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
@@ -47,8 +51,10 @@ def product(request):
         "is_product": True,
         "products": page_obj,
         "page_obj": page_obj,
+        "selected_brand": brand_slug,  
     }
     return render(request, "web/product.html", context)
+
 
 
 def product_detail(request, slug):

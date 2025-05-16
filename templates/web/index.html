@@ -68,9 +68,11 @@
                   <div class="swiper-slide">
                      <div class="case5-single-slider">
                         <div class="image-area">
+                           <a href="{% url 'web:product' %}?brand={{ brand.slug }}">
                            <div class="image">
-                              <img src="{{brand.image.url}}" alt="">
+                                 <img src="{{ brand.image.url }}" alt="{{ brand.title }}">
                            </div>
+                        </a>
                         </div>
                         
                      </div>
