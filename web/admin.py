@@ -34,7 +34,10 @@ class ProductEnquiryAdmin(admin.ModelAdmin):
 
 @admin.register(Brand)
 class BrandAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title',)
+    prepopulated_fields = {'slug': ('title',)}
+    search_fields = ('title',)
+    list_filter = ('title',)
 
 @admin.register(FAQ)
 class FAQAdmin(admin.ModelAdmin):

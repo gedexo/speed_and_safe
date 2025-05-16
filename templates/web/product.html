@@ -34,9 +34,11 @@
          {% for product in products %}
            <div class="col-lg-4 col-md-6">
              <div class="solutions-box">
+              <a href="{{ product.get_absolute_url }}">
                <div class="image">
                  <img src="{{ product.image.url }}" alt="{{ product.title }}">
                </div>
+              </a>
                <div class="content heading1">
                  {% comment %} <div class="icon">
                    <img src="{% static 'web/assets/img/icon/solutions1-icon1.png' %}" alt="">

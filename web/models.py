@@ -62,6 +62,7 @@ class Product(models.Model):
         return reverse_lazy('web:product_detail', kwargs={'slug': self.slug})
     
     class Meta:
+        ordering = ["id"]
         verbose_name = "Product"
         verbose_name_plural = "Products"
 
@@ -84,6 +85,7 @@ class ProductEnquiry(models.Model):
     
 class Brand(models.Model):
     title = models.CharField(max_length=180)
+    slug = models.SlugField(blank=True, null=True)
     image = models.ImageField(upload_to="brand/")
 
     def __str__(self):

@@ -11247,6 +11247,7 @@ a:focus {
   padding: 24px 24px 32px 24px;
   text-align: center;
   transition: all 0.4s;
+  height: 100%;
 }
 .solutions-box .image {
   border-radius: 16px;
