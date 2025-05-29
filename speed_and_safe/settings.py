@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'web',
     'tinymce',
+    'import_export',
 
 ]
 

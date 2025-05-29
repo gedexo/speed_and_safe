@@ -71,7 +71,7 @@ def product(request):
 
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)
-    other_products = Product.objects.exclude(slug=slug, category=product.category)
+    other_products = Product.objects.exclude(slug=slug, category=product.category)[:6]
 
     if request.method == "POST":
         form = ProductEnquiryForm(request.POST)

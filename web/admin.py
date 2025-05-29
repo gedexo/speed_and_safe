@@ -1,4 +1,5 @@
 from django.contrib import admin
+from import_export.admin import ImportExportModelAdmin
 
 from .models import *
 
@@ -19,15 +20,15 @@ class BlogAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     
 @admin.register(ProductCategory)
-class ProductCategoryAdmin(admin.ModelAdmin):
+class ProductCategoryAdmin(ImportExportModelAdmin):
     list_display = ('title',)
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title',)
     list_filter = ('title',)
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    list_display = ('title',)
+class ProductAdmin(ImportExportModelAdmin):
+    list_display = ('title', 'category',)
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title',)
     list_filter = ('title',)
@@ -40,7 +41,7 @@ class ProductEnquiryAdmin(admin.ModelAdmin):
     ordering = ('-id',)
 
 @admin.register(Brand)
-class BrandAdmin(admin.ModelAdmin):
+class BrandAdmin(ImportExportModelAdmin):
     list_display = ('title',)
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title',)
