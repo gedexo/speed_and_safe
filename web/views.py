@@ -6,7 +6,7 @@ from django.conf import settings
 from django.http import JsonResponse
 from django.core.mail import EmailMessage
 
-from .models import Banner, Blog, Product, Brand, FAQ
+from .models import Banner, Blog, Product, Brand, FAQ, ProductCategory
 from .forms import ContactForm, ProductEnquiryForm
 
 
@@ -35,13 +35,25 @@ def brand(request):
     }
     return render(request, "web/brand.html", context)
 
+def product_category(request):
+    product_categories = ProductCategory.objects.all()
+    context = {
+        "product_categories":product_categories
+    }
+    return render(request, "web/category.html", context)
+
 
 def product(request):
     brand_slug = request.GET.get('brand')
+    category_slug = request.GET.get('category')
+
+    products = Product.objects.all()
+
     if brand_slug:
-        products = Product.objects.filter(brand__slug=brand_slug)
-    else:
-        products = Product.objects.all()
+        products = products.filter(brand__slug=brand_slug)
+
+    if category_slug:
+        products = products.filter(category__slug=category_slug)
 
     paginator = Paginator(products, 9)
     page_number = request.GET.get('page')
@@ -51,15 +63,15 @@ def product(request):
         "is_product": True,
         "products": page_obj,
         "page_obj": page_obj,
-        "selected_brand": brand_slug,  
+        "selected_brand": brand_slug,
+        "selected_category": category_slug,
     }
     return render(request, "web/product.html", context)
 
 
-
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)
-    other_products = Product.objects.exclude(slug=slug)
+    other_products = Product.objects.exclude(slug=slug, category=product.category)
 
     if request.method == "POST":
         form = ProductEnquiryForm(request.POST)

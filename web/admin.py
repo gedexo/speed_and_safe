@@ -17,6 +17,13 @@ class ContactAdmin(admin.ModelAdmin):
 class BlogAdmin(admin.ModelAdmin):
     list_display = ('title', 'date',)
     prepopulated_fields = {'slug': ('title',)}
+    
+@admin.register(ProductCategory)
+class ProductCategoryAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+    prepopulated_fields = {'slug': ('title',)}
+    search_fields = ('title',)
+    list_filter = ('title',)
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
