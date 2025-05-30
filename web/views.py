@@ -13,10 +13,10 @@ from .forms import ContactForm, ProductEnquiryForm
 def index(request):
     banners = Banner.objects.all()
     blogs = Blog.objects.all()[:3]
-    products = Product.objects.all()
+    product_categories = ProductCategory.objects.all()
     faqs = FAQ.objects.all()
     brands = Brand.objects.all()
-    context = {"is_index": True, "banners":banners, "blogs":blogs, "products":products, "faqs":faqs, "brands":brands}
+    context = {"is_index": True, "banners":banners, "blogs":blogs, "product_categories":product_categories, "faqs":faqs, "brands":brands}
     return render(request, "web/index.html", context)
 
 

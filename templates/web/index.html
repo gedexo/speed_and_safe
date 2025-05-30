@@ -42,52 +42,7 @@
    </div>
 
    <!--===== HERO AREA START =====-->
-<!--===== Brand AREA START =====-->
 
-<div class="case-study5 sp brand-slider-section" >
-   <div class="container">
-      <div class="row align-items-center align-items-center">
-         <div class="col-lg-6">
-            <div class="heading1">
-               <span class="sub-title2 left-side" data-aos="fade-left" data-aos-duration="800">Brands</span>
-               <h2 data-aos="fade-left" data-aos-duration="1200">Our Popular Brands</h2>
-            </div>
-         </div>
-         <div class="col-lg-6">
-            <div class="case5-slider-btns text-end md:text-start sm:text-start md:mt-30 sm:mt-30" data-aos="fade-right" data-aos-duration="800">
-               <button class="custom-button case5-next"><i class="fas fa-chevron-left"></i></button>
-               <button class="custom-button case5-prev"><i class="fas fa-chevron-right"></i></button>
-             </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-lg-12">
-            <div class="case5-slider case5grid6-slider  _relative mt-40" data-aos="fade-up" data-aos-duration="900">
-               <div class="swiper-wrapper">
-                  {% for brand in brands %}
-                  <div class="swiper-slide">
-                     <div class="case5-single-slider">
-                        <div class="image-area">
-                           <a href="{% url 'web:product' %}?brand={{ brand.slug }}">
-                           <div class="image">
-                                 <img src="{{ brand.image.url }}" alt="{{ brand.title }}">
-                           </div>
-                        </a>
-                        </div>
-                        
-                     </div>
-                  </div>
-                  {% endfor%}
-                  
-
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-
-<!--===== brand AREA END =====-->
    <!--===== ABOUT AREA START =====-->
 
   <div class="about4 sp">
@@ -275,7 +230,7 @@
 
 <!--===== Product AREA START =====-->
 
-   <div class="solutions4 sp bg-cover" style="background-image: url(assets/img/bg/common-bg1.jpg);">
+   {% comment %} <div class="solutions4 sp bg-cover" style="background-image: url(assets/img/bg/common-bg1.jpg);">
       <div class="container">
          <div class="row align-items-center align-items-center">
             <div class="col-lg-6">
@@ -325,12 +280,178 @@
             </div>
          </div>
       </div>
-   </div>
+   </div> {% endcomment %}
+
+    <section id="product-sec">
+        <div class="topLine">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="item">
+                        <img src="{% static 'web/assets/img/icons/icon1.jpg' %}" alt="Icon" class="img-fliud">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'web/assets/img/icons/icon2.jpg' %}" alt="Icon" class="img-fliud">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'web/assets/img/icons/icon3.jpg' %}" alt="Icon" class="img-fliud">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'web/assets/img/icons/icon4.jpg' %}" alt="Icon" class="img-fliud">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'web/assets/img/icons/icon5.jpg' %}" alt="Icon" class="img-fliud">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'web/assets/img/icons/icon6.jpg' %}" alt="Icon" class="img-fliud">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'web/assets/img/icons/icon7.jpg' %}" alt="Icon" class="img-fliud">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        
+        <div class="proWrap">
+            <div class="container">
+                <div class="row">
+                  <div class="col-lg-6 m-auto mb-5">
+                     <div class="heading1 text-center">
+                        <span class="sub-title3" data-aos="fade-left" data-aos-duration="800">Our Products</span>
+                        <h2 data-aos="fade-left" data-aos-duration="1000">Explore Our Popular Products</h2>
+                     </div>
+                  </div>
+                </div>
+            </div>
+            <div class="tab-sec">
+                <div class="container">
+                    <ul class="nav nav-pills mb-3" id="product-tab" role="tablist">
+                        {% for category in product_categories %}
+                           <li class="nav-item" role="presentation">
+                                 <button class="nav-link {% if forloop.first %}active{% endif %}" 
+                                       id="pills-tab-{{ category.slug }}-products" 
+                                       data-bs-toggle="pill" 
+                                       data-bs-target="#pills-{{ category.slug }}-products" 
+                                       type="button" 
+                                       role="tab" 
+                                       aria-controls="pills-{{ category.slug }}-products" 
+                                       aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+                                    {{ category.title }}
+                                 </button>
+                           </li>
+                        {% endfor %}
+                     </ul>
+                </div>
+
+               <div class="tab-content" id="product-tabContent">
+               {% for category in product_categories %}
+                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="pills-{{category.slug}}-products" role="tabpanel" aria-labelledby="pills-tab-{{category.slug}}-products">
+                        <div class="container">
+                            <div class="owl-carousel" id="productSlider-{{ category.slug }}">
+                                <div class="item">
+                                    <div class="proWrapper">
+                                     {% for product in category.get_products %}
+                                        <a href="#" class="product-box">
+                                            <div class="icon-box">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 272 316">
+                                                    <path
+                                                        d="M234.481,267.984 C226.278,271.686 218.624,276.619 210.850,281.207 C193.222,291.611 175.270,301.039 155.231,306.489 C137.350,311.352 119.370,311.549 101.368,309.519 C80.602,307.177 62.182,298.396 45.302,286.360 C35.370,279.278 25.106,272.715 13.467,268.677 C9.307,267.234 4.911,266.547 0.562,266.563 L0.562,10.000 C0.562,4.477 5.040,-0.000 10.562,-0.000 L261.562,-0.000 C267.085,-0.000 271.562,4.477 271.562,10.000 L271.562,260.877 C258.558,260.190 246.187,262.703 234.481,267.984 Z" />
+                                                </svg>
+                                                <div class="img-box">
+                                                    <img alt="image" class="img-fluid" src="{{product.image.url}}" data-src="{{product.image.url}}" />
+                                                </div>
+                                            </div>
+                                            <div class="name">{{product.title}}</div>
+                                            <div class="quantity">{{product.quantity}}</div>
+                                        </a>
+                                       {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  {% endfor %}
+                </div>
+            </div>
+
+            <div class="tab-mob">
+                <div class="container">
+                    <select class="js-example-basic-single">
+                     {% for category in product_categories %}
+                        <option value="{{category.slug}}-products">{{category.title}}</option>
+                     {% endfor %}
+                    </select>
+
+                    <div class="content-box">
+                     {% for category in product_categories %}
+                        <div class="{{category.slug}}-products box">
+                            <div class="owl-carousel" id="productSliderMob-{{category.slug}}">
+                              {% for product in category.get_products %}
+                                <div class="item">
+                                    <a href="#" class="product-box">
+                                        <div class="icon-box">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 272 316">
+                                                <path
+                                                    d="M234.481,267.984 C226.278,271.686 218.624,276.619 210.850,281.207 C193.222,291.611 175.270,301.039 155.231,306.489 C137.350,311.352 119.370,311.549 101.368,309.519 C80.602,307.177 62.182,298.396 45.302,286.360 C35.370,279.278 25.106,272.715 13.467,268.677 C9.307,267.234 4.911,266.547 0.562,266.563 L0.562,10.000 C0.562,4.477 5.040,-0.000 10.562,-0.000 L261.562,-0.000 C267.085,-0.000 271.562,4.477 271.562,10.000 L271.562,260.877 C258.558,260.190 246.187,262.703 234.481,267.984 Z" />
+                                            </svg>
+                                            <div class="img-box">
+                                                <img alt="image" class="img-fluid" src="{{product.image.url}}" data-src="{{product.image.url}}" />
+                                            </div>
+                                        </div>
+
+                                        <div class="name">{{product.title}}</div>
+                                        <div class="quantity">{{product.quantity}}</div>
+                                    </a>
+                                </div>
+                              {% endfor %}
+
+                            </div>
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <!--===== Product AREA END =====-->
 
+<!--===== Brand AREA START =====-->
 
-  <!--===== BLOG AREA START =====-->
+<div class="case-study5 sp brand-slider-section" >
+   <div class="container">
+      <div class="row ">
+         <div class="col-lg-6 m-auto text-center">
+            <div class="heading1 text-center">
+               <span class="sub-title2" data-aos="fade-left" data-aos-duration="800">Brands</span>
+               <h2 data-aos="fade-left" data-aos-duration="1000">Our Popular Brands</h2>
+            </div>
+         </div>
+      </div>
+      <div class="brand-section">
+         <div class=" mt-40" data-aos="fade-up" data-aos-duration="900">
+            <div class="row">
+               <div class="brand-item-list">
+                  {% for brand in brands %}
+                  <div class="col-lg-3">
+                     <div class="brand-item-card">
+                        <img src="{{brand.image.url}}" alt="{{brand.title}}">
+                     </div>
+                  </div>
+                  {% endfor %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!--===== brand AREA END =====-->
+
+<!--===== BLOG AREA START =====-->
 
   <div class="sp _relative z-2" >
    <div class="container">
@@ -385,6 +506,8 @@
 
 
 {% block js %}
+<!-- OWL-->
+   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"> </script>
 <script>
    window.onload = function () {
       const swiper = new Swiper('.blogSwiper', {
@@ -409,6 +532,99 @@
          }
       });
    };
+
+   $('#productSlider1').owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+
+   $('#productSliderMob1').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+      responsive: {
+         0: {
+               items: 1
+         },
+         576: {
+               items: 2
+         },
+         768: {
+               items: 3
+         },
+         1000: {
+               items: 5
+         }
+      }
+   })
+
+   document.addEventListener("DOMContentLoaded", function () {
+    {% for category in product_categories %}
+        $('#productSlider-{{ category.slug }}').owlCarousel({
+            loop: true,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                  0: {
+                     items: 1
+                  },
+                  600: {
+                     items: 1
+                  },
+                  1000: {
+                     items: 1
+                  }
+            }
+        });
+    {% endfor %}
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    {% for category in product_categories %}
+        $('#productSliderMob-{{ category.slug }}').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+               0: {
+                     items: 1
+               },
+               576: {
+                     items: 2
+               },
+               768: {
+                     items: 3
+               },
+               1000: {
+                     items: 5
+               }
+            }
+        });
+    {% endfor %}
+});
+
 </script>
 
 

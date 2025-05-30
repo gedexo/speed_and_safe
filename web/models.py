@@ -59,6 +59,9 @@ class ProductCategory(models.Model):
     def get_absolute_url(self):
         return reverse_lazy('web:product_category_detail', kwargs={'slug': self.slug})
 
+    def get_products(self):
+        return Product.objects.filter(category=self)
+
     class Meta:
         verbose_name = "Product Category"
         verbose_name_plural = "Product Categories"
@@ -69,6 +72,7 @@ class Product(models.Model):
     brand = models.ForeignKey("web.Brand", on_delete=models.CASCADE, related_name='products', blank=True, null=True)
     title = models.CharField(max_length=180)
     slug = models.SlugField()
+    quantity = models.CharField(max_length=80, null=True)
     image = models.ImageField(upload_to="product/")
     description = HTMLField()
 
