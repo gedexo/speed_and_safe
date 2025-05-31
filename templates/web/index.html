@@ -345,34 +345,30 @@
                 </div>
 
                <div class="tab-content" id="product-tabContent">
-               {% for category in product_categories %}
-                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="pills-{{category.slug}}-products" role="tabpanel" aria-labelledby="pills-tab-{{category.slug}}-products">
-                        <div class="container">
-                            <div class="owl-carousel" id="productSlider-{{ category.slug }}">
-                                <div class="item">
-                                    <div class="proWrapper">
-                                     {% for product in category.get_products %}
-                                        <a href="#" class="product-box">
-                                            <div class="icon-box">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 272 316">
-                                                    <path
-                                                        d="M234.481,267.984 C226.278,271.686 218.624,276.619 210.850,281.207 C193.222,291.611 175.270,301.039 155.231,306.489 C137.350,311.352 119.370,311.549 101.368,309.519 C80.602,307.177 62.182,298.396 45.302,286.360 C35.370,279.278 25.106,272.715 13.467,268.677 C9.307,267.234 4.911,266.547 0.562,266.563 L0.562,10.000 C0.562,4.477 5.040,-0.000 10.562,-0.000 L261.562,-0.000 C267.085,-0.000 271.562,4.477 271.562,10.000 L271.562,260.877 C258.558,260.190 246.187,262.703 234.481,267.984 Z" />
-                                                </svg>
-                                                <div class="img-box">
-                                                    <img alt="image" class="img-fluid" src="{{product.image.url}}" data-src="{{product.image.url}}" />
-                                                </div>
-                                            </div>
-                                            <div class="name">{{product.title}}</div>
-                                            <div class="quantity">{{product.quantity}}</div>
-                                        </a>
-                                       {% endfor %}
-                                    </div>
+    {% for category in product_categories %}
+    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="pills-{{ category.slug }}-products" role="tabpanel" aria-labelledby="pills-tab-{{ category.slug }}-products">
+        <div class="container">
+            <div class="row">
+                {% for product in category.get_products %}
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="product-box text-center">
+                        <a href="#">
+                            <div class="icon-box mb-2">
+                                <div class="image-box">
+                                    <img alt="image" class="img-fluid" src="{{ product.image.url }}" />
                                 </div>
                             </div>
-                        </div>
+                            <div class="name font-weight-bold">{{ product.title }}</div>
+                            <div class="quantity text-muted">{{ product.quantity }}</div>
+                        </a>
                     </div>
-                  {% endfor %}
                 </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
             </div>
 
             <div class="tab-mob">
@@ -421,7 +417,7 @@
 
 <!--===== Brand AREA START =====-->
 
-<div class="case-study5 sp brand-slider-section" >
+<div class="sp _relative z-2 brand-slider-section" >
    <div class="container">
       <div class="row ">
          <div class="col-lg-6 m-auto text-center">
@@ -431,20 +427,40 @@
             </div>
          </div>
       </div>
-      <div class="brand-section">
-         <div class=" mt-40" data-aos="fade-up" data-aos-duration="900">
-            <div class="row">
-               <div class="brand-item-list">
-                  {% for brand in brands %}
-                  <div class="col-lg-3">
-                     <div class="brand-item-card">
-                        <img src="{{brand.image.url}}" alt="{{brand.title}}">
-                     </div>
-                  </div>
-                  {% endfor %}
-               </div>
+      <div class="brand-section mt-40" data-aos="fade-up" data-aos-duration="900">
+
+      <!-- First Row: Left to Right -->
+      <div class="slider-row">
+         <div class="slider-track">
+            {% for brand in brands %}
+            <div class="brand-item-card">
+            <img src="{{ brand.image.url }}" alt="{{ brand.title }}">
             </div>
+            {% endfor %}
+            {% for brand in brands %}
+            <div class="brand-item-card">
+            <img src="{{ brand.image.url }}" alt="{{ brand.title }}">
+            </div>
+            {% endfor %}
          </div>
+      </div>
+
+      <!-- Second Row: Right to Left -->
+      <div class="slider-row reverse mt-3">
+         <div class="slider-track">
+            {% for brand in brands %}
+            <div class="brand-item-card">
+            <img src="{{ brand.image.url }}" alt="{{ brand.title }}">
+            </div>
+            {% endfor %}
+            {% for brand in brands %}
+            <div class="brand-item-card">
+            <img src="{{ brand.image.url }}" alt="{{ brand.title }}">
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+
       </div>
    </div>
 </div>
