@@ -5,6 +5,7 @@ from django.core.paginator import Paginator
 from django.conf import settings
 from django.http import JsonResponse
 from django.core.mail import EmailMessage
+from django.db.models import Count
 
 from .models import Banner, Blog, Product, Brand, FAQ, ProductCategory
 from .forms import ContactForm, ProductEnquiryForm
@@ -35,17 +36,19 @@ def brand(request):
     }
     return render(request, "web/brand.html", context)
 
-def product_category(request):
-    product_categories = ProductCategory.objects.all()
-    context = {
-        "product_categories":product_categories
-    }
-    return render(request, "web/category.html", context)
+# def product_category(request):
+#     product_categories = ProductCategory.objects.all()
+#     context = {
+#         "product_categories":product_categories
+#     }
+#     return render(request, "web/category.html", context)
 
 
 def product(request):
     brand_slug = request.GET.get('brand')
     category_slug = request.GET.get('category')
+
+    product_categories = ProductCategory.objects.annotate(product_count=Count('product'))
 
     products = Product.objects.all()
 
@@ -65,6 +68,8 @@ def product(request):
         "page_obj": page_obj,
         "selected_brand": brand_slug,
         "selected_category": category_slug,
+        "product_categories": product_categories,
+        "total_products_count": Product.objects.count(),
     }
     return render(request, "web/product.html", context)
 

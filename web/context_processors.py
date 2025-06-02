@@ -1,7 +1,7 @@
-from .models import Product
+from .models import ProductCategory
 
 def main_context(request):
-    footer_products = Product.objects.all()[:8]
+    footer_categories = ProductCategory.objects.all()[:8]
     return {
-        "footer_products": footer_products
+        "footer_categories": footer_categories
     }

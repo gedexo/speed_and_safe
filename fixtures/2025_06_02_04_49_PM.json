@@ -1,0 +1,750 @@
+[
+{
+  "model": "web.productcategory",
+  "pk": 1,
+  "fields": {
+    "title": "Flour Mill Products",
+    "slug": "flour-mill-products"
+  }
+},
+{
+  "model": "web.productcategory",
+  "pk": 17,
+  "fields": {
+    "title": "Pickle",
+    "slug": "pickle"
+  }
+},
+{
+  "model": "web.productcategory",
+  "pk": 18,
+  "fields": {
+    "title": "Frozen",
+    "slug": "frozen"
+  }
+},
+{
+  "model": "web.productcategory",
+  "pk": 20,
+  "fields": {
+    "title": "Oils",
+    "slug": "oils"
+  }
+},
+{
+  "model": "web.productcategory",
+  "pk": 21,
+  "fields": {
+    "title": "Seafood",
+    "slug": "seafood"
+  }
+},
+{
+  "model": "web.productcategory",
+  "pk": 22,
+  "fields": {
+    "title": "Fruit Pulp",
+    "slug": "fruit-pulp"
+  }
+},
+{
+  "model": "web.productcategory",
+  "pk": 23,
+  "fields": {
+    "title": "Meat",
+    "slug": "meat"
+  }
+},
+{
+  "model": "web.productcategory",
+  "pk": 24,
+  "fields": {
+    "title": "Snacks",
+    "slug": "snacks"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "brand": 8,
+    "title": "Abhiman Chakki Fresh Atta",
+    "slug": "abhiman-chakki-fresh-atta",
+    "image": "product/abhiman_chakki_atta.png",
+    "description": "<p class=\"\" data-start=\"83\" data-end=\"509\">Experience the wholesome goodness of <strong data-start=\"152\" data-end=\"181\">Abhiman Chakki Fresh Atta</strong>, made from the finest quality wheat grains. Stone-ground using traditional chakki methods, this atta retains essential nutrients, delivering soft, fluffy rotis with a rich aroma and authentic taste. Perfect for daily meals, it ensures natural freshness, high fiber content, and easy digestion &mdash; a healthy choice for every home.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "brand": 9,
+    "title": "Kitchen Mate  Steamed Puttu Podi",
+    "slug": "kitchen-mate-steamed-puttu-podi",
+    "image": "product/putt-podi.png",
+    "description": "<p><strong data-start=\"95\" data-end=\"130\">Kitchen Mate Steamed Puttu Podi</strong> is a finely milled rice flour blend, specially crafted to bring out the traditional taste and texture of Kerala-style puttu. Using premium quality raw rice, the grains are carefully selected, washed, dried, and ground to the perfect consistency that ensures soft, fluffy, and well-layered puttu every time. The flour undergoes a unique steaming process that enhances its texture, making it light and easy to cook while retaining its natural aroma and nutritional value.</p>\n<p>This puttu podi is ideal for those seeking a wholesome, nutritious breakfast that is both filling and easy to digest. It pairs beautifully with classic sides like black chickpea curry (kadala curry), ripe bananas, or grated coconut with sugar. Whether prepared in a traditional puttu maker or a modern pressure cooker attachment, Kitchen Mate Steamed Puttu Podi delivers consistent results with minimal effort.</p>\n<p class=\"\" data-start=\"1014\" data-end=\"1325\">Free from artificial additives, preservatives, and chemical bleaching, it is hygienically packed to lock in freshness and ensure long shelf life. Suitable for vegetarians and those following a clean, natural diet, it makes a perfect addition to every kitchen that values tradition, health, and authentic flavor.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 4,
+  "fields": {
+    "category": 20,
+    "brand": 7,
+    "title": "Cocotree Pure Coconut Oil",
+    "slug": "cocotree-pure-coconut-oil",
+    "image": "product/cocotree1L-with-box_2.webp",
+    "description": "<p class=\"\" data-start=\"181\" data-end=\"496\">Experience the essence of nature with Cocotree Pure Coconut Oil &mdash; extracted from the finest coconuts and crafted using traditional methods to preserve purity and freshness. Ideal for cooking, skincare, and haircare, our 100% natural coconut oil is cold-pressed, chemical-free, and packed with nourishing properties.</p>\r\n<p class=\"\" data-start=\"498\" data-end=\"656\">Whether you're looking to enhance your culinary creations or elevate your wellness routine, Cocotree delivers unmatched versatility and quality in every drop.</p>\r\n<p class=\"\" data-start=\"658\" data-end=\"677\"><strong data-start=\"658\" data-end=\"675\">Key Features:</strong></p>\r\n<ul data-start=\"678\" data-end=\"888\">\r\n<li class=\"\" data-start=\"678\" data-end=\"703\">\r\n<p class=\"\" data-start=\"680\" data-end=\"703\">100% pure and natural</p>\r\n</li>\r\n<li class=\"\" data-start=\"704\" data-end=\"751\">\r\n<p class=\"\" data-start=\"706\" data-end=\"751\">Cold-pressed for maximum nutrient retention</p>\r\n</li>\r\n<li class=\"\" data-start=\"752\" data-end=\"805\">\r\n<p class=\"\" data-start=\"754\" data-end=\"805\">Free from additives, preservatives, and chemicals</p>\r\n</li>\r\n<li class=\"\" data-start=\"806\" data-end=\"846\">\r\n<p class=\"\" data-start=\"808\" data-end=\"846\">Suitable for cooking, hair, and skin</p>\r\n</li>\r\n<li class=\"\" data-start=\"847\" data-end=\"888\">\r\n<p class=\"\" data-start=\"849\" data-end=\"888\">Rich in healthy fats and antioxidants</p>\r\n</li>\r\n</ul>\r\n<p class=\"\" data-start=\"890\" data-end=\"946\"><strong data-start=\"890\" data-end=\"910\">Available Sizes:</strong> 500ml | 2L | 1L | Bulk Packaging</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 5,
+  "fields": {
+    "category": 22,
+    "brand": 7,
+    "title": "Cocotree Tender Coconut Pulp",
+    "slug": "cocotree-tender-coconut-pulp",
+    "image": "product/cocotree_1.jpeg",
+    "description": "<p class=\"\" data-start=\"152\" data-end=\"409\">Cocotree Tender Coconut Pulp is harvested from young, green coconuts at the peak of freshness. Soft, succulent, and mildly sweet, this all-natural pulp is a tropical delight&mdash;perfect for desserts, smoothies, fruit salads, or as a refreshing snack on its own.</p>\r\n<p class=\"\" data-start=\"411\" data-end=\"531\">Carefully processed and packed to retain its natural texture and nutrients, it&rsquo;s a wholesome treat straight from nature.</p>\r\n<p class=\"\" data-start=\"533\" data-end=\"552\"><strong data-start=\"533\" data-end=\"550\">Key Features:</strong></p>\r\n<ul data-start=\"553\" data-end=\"742\">\r\n<li class=\"\" data-start=\"553\" data-end=\"589\">\r\n<p class=\"\" data-start=\"555\" data-end=\"589\">100% natural tender coconut pulp</p>\r\n</li>\r\n<li class=\"\" data-start=\"590\" data-end=\"625\">\r\n<p class=\"\" data-start=\"592\" data-end=\"625\">No added sugar or preservatives</p>\r\n</li>\r\n<li class=\"\" data-start=\"626\" data-end=\"661\">\r\n<p class=\"\" data-start=\"628\" data-end=\"661\">Ready to eat and use in recipes</p>\r\n</li>\r\n<li class=\"\" data-start=\"662\" data-end=\"704\">\r\n<p class=\"\" data-start=\"664\" data-end=\"704\">Rich in electrolytes and dietary fiber</p>\r\n</li>\r\n<li class=\"\" data-start=\"705\" data-end=\"742\">\r\n<p class=\"\" data-start=\"707\" data-end=\"742\">Hygienically packed for freshness</p>\r\n</li>\r\n</ul>\r\n<p class=\"\" data-start=\"744\" data-end=\"811\">&nbsp;</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 6,
+  "fields": {
+    "category": 17,
+    "brand": 9,
+    "title": "KitchenMate Lemon Pickle",
+    "slug": "kitchenmate-lemon-pickle",
+    "image": "product/KitchenMate-Lemon-Pickle.webp",
+    "description": "<p class=\"\" data-start=\"117\" data-end=\"672\"><strong data-start=\"117\" data-end=\"145\">KitchenMate Lemon Pickle</strong> is a classic blend of sun-ripened lemons and hand-roasted spices, prepared using time-honored recipes passed down through generations. Each batch is carefully crafted to preserve the natural tanginess of the lemons while infusing them with bold, aromatic flavors. The lemons are pickled slowly to allow the spices to soak in, resulting in a rich, balanced taste that lingers on the palate. With its vibrant color, zesty aroma, and perfectly layered flavors, this pickle brings a touch of tradition and nostalgia to every meal.</p>\r\n<p class=\"\" data-start=\"674\" data-end=\"1175\">Ideal as a flavorful side for rice, parathas, dosas, or curd rice, KitchenMate Lemon Pickle turns even the simplest dish into a satisfying experience. It&rsquo;s not just a condiment, but a celebration of authentic Indian taste, made without artificial colors or preservatives. Whether you&rsquo;re packing a lunchbox or serving a festive thali, this pickle adds that extra burst of flavor that makes food memorable. With every spoonful, KitchenMate brings the comfort of homemade goodness straight to your plate.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 7,
+  "fields": {
+    "category": 1,
+    "brand": 9,
+    "title": "KitchenMate Pathal Podi",
+    "slug": "kitchenmate-pathal-podi",
+    "image": "product/KitchenMate-Malabar-PathalPodi-1Kg_1.webp",
+    "description": "<p class=\"\" data-start=\"127\" data-end=\"726\"><strong data-start=\"127\" data-end=\"154\">KitchenMate Pathal Podi</strong> is a finely blended, flavorful flour mix crafted especially for making soft and delicious traditional Kerala pathal (rice rotis). Made from high-quality, finely milled rice, this powder is prepared with precision to ensure smooth texture and easy kneading. It&rsquo;s a staple in many South Indian households, known for its consistency and ability to deliver perfectly puffed and tender rotis every time. Whether you&rsquo;re preparing a quick breakfast or a hearty dinner, KitchenMate Pathal Podi brings the authentic taste and texture of homemade pathals to your kitchen with ease.</p>\n<p class=\"\" data-start=\"728\" data-end=\"1095\">Carefully packed to maintain freshness and purity, KitchenMate Pathal Podi is ideal for both regular home use and bulk cooking needs. Free from additives and processed with strict quality standards, this flour mix ensures the taste and tradition of Kerala cuisine remains intact. With KitchenMate, making soft, tasty pathals has never been simpler or more satisfying.</p>\n<p class=\"\" data-start=\"1097\" data-end=\"1127\"><strong data-start=\"1097\" data-end=\"1117\">Available Sizes:</strong> 1kg | 5kg</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 8,
+  "fields": {
+    "category": 17,
+    "brand": 9,
+    "title": "KitchenMate Mango Pickle",
+    "slug": "kitchenmate-mango-pickle",
+    "image": "product/KitchenMate-Mango-Pickle.webp",
+    "description": "<p class=\"\" data-start=\"145\" data-end=\"591\"><strong data-start=\"145\" data-end=\"173\">KitchenMate Mango Pickle</strong> captures the bold, tangy essence of raw mangoes blended with a perfect mix of traditional Indian spices. Carefully selected mangoes are chopped and marinated in a flavorful combination of mustard, red chili, fenugreek, and aromatic oils&mdash;then cured slowly to bring out a deep, authentic taste. Every bite delivers a punch of flavor that&rsquo;s both spicy and sour, making it an irresistible accompaniment to everyday meals.</p>\r\n<p class=\"\" data-start=\"593\" data-end=\"961\">Prepared using a time-tested recipe without any artificial preservatives, KitchenMate Mango Pickle brings homemade goodness straight to your table. Whether you're enjoying rice, parathas, dosas, or even a quick snack, this pickle adds a vibrant, mouthwatering twist. Its rich texture, natural ingredients, and robust flavor make it a must-have in every Indian kitchen.</p>\r\n<p class=\"\" data-start=\"963\" data-end=\"1001\">&nbsp;</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 9,
+  "fields": {
+    "category": 1,
+    "brand": 9,
+    "title": "KitchenMate Rice Powder",
+    "slug": "kitchenmate-rice-powder",
+    "image": "product/KitchenMate-RicePowder-1Kg.webp",
+    "description": "<p class=\"\" data-start=\"133\" data-end=\"586\"><strong data-start=\"133\" data-end=\"160\">KitchenMate Rice Powder</strong> is made from premium-quality raw rice, finely ground to a smooth, consistent texture that&rsquo;s perfect for traditional South Indian dishes. Whether you&rsquo;re making soft idiyappam, fluffy appams, or crispy snacks, this rice powder ensures lightness, smoothness, and authentic taste in every preparation. Carefully milled and hygienically packed, it retains its natural freshness, making it a must-have for your daily cooking needs.</p>\n<p class=\"\" data-start=\"588\" data-end=\"905\">Trusted by home cooks and professionals alike, KitchenMate Rice Powder is free from additives and delivers the purity and quality you expect in every dish. Its versatility makes it ideal for a wide range of recipes, from breakfast to evening snacks. Enjoy the wholesome goodness of finely ground rice with every pack.</p>\n<p class=\"\" data-start=\"907\" data-end=\"937\"><strong data-start=\"907\" data-end=\"927\">Available Sizes:</strong> 1kg | 5kg</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 10,
+  "fields": {
+    "category": 1,
+    "brand": 11,
+    "title": "Vnatural Grated Coconut",
+    "slug": "vnatural-grated-coconut",
+    "image": "product/Grated_Coconut.webp",
+    "description": "<p class=\"\" data-start=\"137\" data-end=\"619\"><strong data-start=\"137\" data-end=\"164\">Vnatural Grated Coconut</strong> brings you the fresh, rich taste of real coconut in a ready-to-use form, perfect for today&rsquo;s fast-paced kitchens. Made from premium, mature coconuts that are finely grated and hygienically processed, this product retains the authentic aroma, texture, and flavor of freshly grated coconut. Whether you're preparing traditional curries, chutneys, or desserts, Vnatural Grated Coconut adds the perfect touch of natural sweetness and richness to your dishes.</p>\n<p class=\"\" data-start=\"621\" data-end=\"950\">Ideal for both home cooking and professional kitchens, Vnatural ensures quality and convenience without compromising on taste. Free from preservatives and additives, it&rsquo;s packed fresh to maintain its original moisture and softness. With Vnatural Grated Coconut, enjoy the essence of Kerala&rsquo;s culinary tradition&mdash;anytime, anywhere.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 11,
+  "fields": {
+    "category": 18,
+    "brand": 11,
+    "title": "Vnatural Fresh Frozen Malabar Porota",
+    "slug": "vnatural-fresh-frozen-malabar-porota",
+    "image": "product/Malabar_Poro_1.webp",
+    "description": "<p class=\"\" data-start=\"150\" data-end=\"599\"><strong data-start=\"150\" data-end=\"190\">Vnatural Fresh Frozen Malabar Porota</strong> brings the authentic taste of Kerala&rsquo;s favorite layered flatbread straight to your kitchen. Expertly prepared using traditional techniques, these porotas are soft on the inside and perfectly crisp on the outside, with delicate, flaky layers that melt in your mouth. Made from high-quality ingredients and no added preservatives, each porota is par-cooked and frozen to lock in freshness, flavor, and texture.</p>\n<p class=\"\" data-start=\"601\" data-end=\"929\">Ideal for busy households and foodservice establishments, Vnatural Malabar Porota is quick to heat and serve&mdash;just pan-fry for a few minutes and enjoy it hot with your favorite curry, stew, or chutney. Whether it&rsquo;s breakfast, lunch, or dinner, this frozen delight adds the authentic taste of Malabar to any meal with zero hassle.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 12,
+  "fields": {
+    "category": 18,
+    "brand": 11,
+    "title": "VNatural Fresh Frozen Pathiri",
+    "slug": "vnatural-fresh-frozen-pathiri",
+    "image": "product/Pathiri.webp",
+    "description": "<p class=\"\" data-start=\"132\" data-end=\"594\"><strong data-start=\"132\" data-end=\"165\">VNatural Fresh Frozen Pathiri</strong> offers the soft, delicate texture and authentic taste of traditional Kerala-style rice flatbreads without the effort of making them from scratch. Made from finely ground rice flour and crafted with care, each pathiri is thin, light, and melts in your mouth&mdash;just like homemade. These ready-to-cook pathiris are gently frozen to preserve their freshness, softness, and natural flavor, making them a convenient choice for any meal.</p>\n<p class=\"\" data-start=\"596\" data-end=\"915\">Perfectly suited for pairing with spicy curries, stews, or coconut-based gravies, vNatural Frozen Pathiri brings the comfort of home-cooked meals to your table in minutes. Just heat on a pan and serve warm for a wholesome, satisfying experience. Ideal for both daily use and festive occasions, it's tradition made easy.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 13,
+  "fields": {
+    "category": 18,
+    "brand": 11,
+    "title": "vNatural Fresh Frozen Veg Samosa",
+    "slug": "vnatural-fresh-frozen-veg-samosa",
+    "image": "product/Samosa_2_1.webp",
+    "description": "<p class=\"\" data-start=\"135\" data-end=\"587\"><strong data-start=\"135\" data-end=\"171\">vNatural Fresh Frozen Veg Samosa</strong> brings you the irresistible taste of India&rsquo;s favorite snack&mdash;crispy, golden pastry pockets filled with a delicious mix of seasoned vegetables. Each samosa is handcrafted with a flaky outer layer and a rich, mildly spiced filling made from potatoes, peas, carrots, and aromatic spices. Frozen at peak freshness, these samosas retain their authentic flavor and texture, ready to enjoy anytime with minimal preparation.</p>\n<p class=\"\" data-start=\"589\" data-end=\"914\">Perfect for tea-time snacks, party platters, or quick appetizers, vNatural Veg Samosas are easy to fry or air-fry straight from the freezer. Whether served with chutney or a hot cup of chai, they offer a satisfying, crunchy bite and a burst of flavor in every mouthful&mdash;bringing the essence of Indian street food to your home.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 14,
+  "fields": {
+    "category": 18,
+    "brand": 11,
+    "title": "vNatural Fresh Frozen Spring Rolls",
+    "slug": "vnatural-fresh-frozen-spring-rolls",
+    "image": "product/Spring_Roll.webp",
+    "description": "<p class=\"\" data-start=\"136\" data-end=\"607\"><strong data-start=\"136\" data-end=\"174\">vNatural Fresh Frozen Spring Rolls</strong> are a delightful blend of crispy texture and savory flavor, perfect for snack lovers and party hosts alike. Each roll is filled with a finely chopped mix of fresh vegetables like cabbage, carrots, and beans, seasoned with Asian-inspired spices and wrapped in a light, golden pastry. These spring rolls are carefully frozen to lock in freshness and flavor, ensuring a crisp outer layer and a juicy, flavorful filling with every bite.</p>\n<p class=\"\" data-start=\"609\" data-end=\"923\">Quick and convenient to prepare, they can be deep-fried, shallow-fried, or air-fried directly from the freezer&mdash;making them an ideal choice for quick snacks, appetizers, or side dishes. Serve them with sweet chili sauce or soy dip, and enjoy the satisfying crunch and taste of restaurant-style spring rolls at home.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 15,
+  "fields": {
+    "category": 1,
+    "brand": 11,
+    "title": "vNatural Tapioca",
+    "slug": "vnatural-tapioca",
+    "image": "product/Tapioca.webp",
+    "description": "<p class=\"\" data-start=\"119\" data-end=\"597\"><strong data-start=\"119\" data-end=\"139\">vNatural Tapioca</strong> offers farm-fresh, peeled, and cut tapioca that&rsquo;s ready to cook&mdash;bringing you the authentic taste of Kerala&rsquo;s favorite root vegetable with unmatched convenience. Carefully sourced and hygienically processed, this frozen tapioca retains its natural flavor, texture, and nutritional value. Whether you&rsquo;re making a comforting kappa vevichathu (mashed tapioca), spicy kappa biryani, or a simple stir-fry, vNatural Tapioca makes preparation quick and hassle-free.</p>\n<p class=\"\" data-start=\"599\" data-end=\"938\">Perfect for both traditional meals and creative recipes, this starchy, energy-rich root is a beloved staple in South Indian cuisine. vNatural ensures that every pack delivers consistent quality&mdash;free from preservatives and processed using advanced freezing technology to lock in freshness. Enjoy the wholesome taste of home with every bite.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 16,
+  "fields": {
+    "category": 18,
+    "brand": 12,
+    "title": "Fruitco Freshly Frozen Tender Coconut",
+    "slug": "fruitco-freshly-frozen-tender-coconut",
+    "image": "product/Untitled.webp",
+    "description": "<p class=\"\" data-start=\"155\" data-end=\"614\"><strong data-start=\"155\" data-end=\"196\">Fruitco Freshly Frozen Tender Coconut</strong> captures the naturally sweet, refreshing taste of young coconut in a convenient frozen form. Carefully selected tender coconuts are scooped, cleaned, and frozen at peak freshness to preserve their soft, jelly-like texture and subtle flavor. Whether you're blending smoothies, crafting tropical desserts, or adding a creamy touch to beverages, this frozen tender coconut adds a burst of tropical delight to any recipe.</p>\n<p class=\"\" data-start=\"616\" data-end=\"942\">Ideal for both home kitchens and foodservice needs, Fruitco's frozen tender coconut offers year-round availability without compromising on taste or quality. Free from preservatives and additives, it's packed to deliver freshness with every use&mdash;bringing the purity and natural goodness of real coconut straight to your freezer.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 17,
+  "fields": {
+    "category": 18,
+    "brand": 12,
+    "title": "Fruitco Freshly Frozen Sapota",
+    "slug": "fruitco-freshly-frozen-sapota",
+    "image": "product/Untitled_design_12.png",
+    "description": "<p class=\"\" data-start=\"132\" data-end=\"607\"><strong data-start=\"132\" data-end=\"165\">Fruitco Freshly Frozen Sapota</strong> (Chikoo) delivers the rich, caramel-like sweetness of ripe sapota in a ready-to-use frozen form. Harvested at peak ripeness and flash-frozen to preserve flavor, texture, and nutrients, this tropical fruit is perfect for smoothies, milkshakes, ice creams, and desserts. With its naturally creamy texture and honeyed taste, sapota is a favorite in Indian households&mdash;and now you can enjoy it anytime, without the hassle of peeling or deseeding.</p>\n<p class=\"\" data-start=\"609\" data-end=\"903\">Free from preservatives and additives, Fruitco ensures that every pack offers consistent quality and freshness. Whether you're blending a quick smoothie or preparing a gourmet dessert, this frozen sapota is a convenient, delicious way to bring tropical flavor to your creations, all year round.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 18,
+  "fields": {
+    "category": 18,
+    "brand": 12,
+    "title": "Fruitco Freshly Frozen Grapes",
+    "slug": "fruitco-freshly-frozen-grapes",
+    "image": "product/Untitled_1.webp",
+    "description": "<p class=\"\" data-start=\"132\" data-end=\"564\"><strong data-start=\"132\" data-end=\"165\">Fruitco Freshly Frozen Grapes</strong> offer the natural sweetness and juicy crunch of handpicked grapes, frozen at peak ripeness to lock in flavor and freshness. These seedless grapes are carefully washed, sorted, and flash-frozen, making them perfect for snacking straight from the freezer or adding to smoothies, desserts, and fruit salads. Their naturally sweet and refreshing taste makes them a healthy alternative to sugary snacks.</p>\n<p class=\"\" data-start=\"566\" data-end=\"876\">Packed with antioxidants, vitamins, and fiber, Fruitco Frozen Grapes are a convenient and nutritious option for health-conscious consumers. Whether you&rsquo;re making chilled beverages, sorbets, or simply enjoying them as a frozen treat, they deliver the goodness of real fruit with no added sugar or preservatives.</p>\n<p class=\"\" data-start=\"878\" data-end=\"916\">&nbsp;</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 19,
+  "fields": {
+    "category": 18,
+    "brand": 12,
+    "title": "Fruitco Freshly Frozen Fruit Blends – Pineapple",
+    "slug": "fruitco-freshly-frozen-fruit-blends-pineapple",
+    "image": "product/Untitled_2.webp",
+    "description": "<p class=\"\" data-start=\"150\" data-end=\"567\"><strong data-start=\"150\" data-end=\"186\">Fruitco Freshly Frozen Pineapple</strong> brings you the bold, tropical sweetness of perfectly ripened pineapple&mdash;peeled, cut, and flash-frozen to preserve its vibrant flavor and juiciness. Each piece is carefully selected and processed under strict hygiene standards, making it ideal for smoothies, juices, desserts, and savory dishes. Enjoy the fresh taste of pineapple without the prep work&mdash;no peeling, slicing, or mess.</p>\n<p class=\"\" data-start=\"569\" data-end=\"870\">Naturally rich in vitamin C and antioxidants, this frozen fruit blend is a healthy, refreshing choice for your daily diet. Whether you&rsquo;re blending up a tropical shake or adding a tangy twist to your cooking, Fruitco&rsquo;s frozen pineapple offers year-round convenience and top-notch quality in every bite.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 20,
+  "fields": {
+    "category": 18,
+    "brand": 12,
+    "title": "Fruitco Freshly Frozen Fruit Blends – Guava",
+    "slug": "fruitco-freshly-frozen-fruit-blends-guava",
+    "image": "product/Untitled_3.webp",
+    "description": "<p class=\"\" data-start=\"146\" data-end=\"557\"><strong data-start=\"146\" data-end=\"178\">Fruitco Freshly Frozen Guava</strong> delivers the exotic, aromatic flavor of ripe guava in a clean, ready-to-use frozen format. Picked at peak ripeness and flash-frozen to preserve its natural sweetness and rich vitamin content, this tropical fruit is perfect for juices, smoothies, desserts, and fruit-based sauces. With its vibrant color and unique, tangy-sweet taste, guava adds a refreshing twist to any recipe.</p>\n<p class=\"\" data-start=\"559\" data-end=\"891\">Free from added sugar, preservatives, and artificial flavorings, Fruitco ensures you get nothing but 100% pure fruit goodness. Whether you&rsquo;re blending a nutrient-rich smoothie or cooking a tropical chutney, our frozen guava offers year-round convenience and the authentic taste of freshly picked fruit&mdash;straight from farm to freezer.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 21,
+  "fields": {
+    "category": 18,
+    "brand": 12,
+    "title": "Fruitco Freshly Frozen Fruit Blends – Mango",
+    "slug": "fruitco-freshly-frozen-fruit-blends-mango",
+    "image": "product/Untitled_4.webp",
+    "description": "<p class=\"\" data-start=\"146\" data-end=\"559\"><strong data-start=\"146\" data-end=\"178\">Fruitco Freshly Frozen Mango</strong> captures the rich, tropical flavor of sun-ripened mangoes in every bite. Carefully selected and flash-frozen at peak ripeness, our mango chunks retain their natural sweetness, vibrant color, and juicy texture&mdash;making them perfect for smoothies, milkshakes, desserts, and sauces. No peeling or cutting required&mdash;just open the pack and enjoy the taste of real mango anytime, anywhere.</p>\n<p class=\"\" data-start=\"561\" data-end=\"863\">Made without any preservatives or additives, Fruitco&rsquo;s frozen mango is a convenient and healthy choice for households and foodservice alike. Whether you're blending a creamy mango lassi, topping a dessert, or simply enjoying it as a frozen treat, our mango delivers freshness and flavor all year round.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 22,
+  "fields": {
+    "category": 18,
+    "brand": 12,
+    "title": "Fruitco Freshly Frozen Fruit Blends – Custard Apple",
+    "slug": "fruitco-freshly-frozen-fruit-blends-custard-apple",
+    "image": "product/Untitled_5.webp",
+    "description": "<p class=\"\" data-start=\"154\" data-end=\"602\"><strong data-start=\"154\" data-end=\"194\">Fruitco Freshly Frozen Custard Apple</strong> brings you the creamy sweetness of this tropical delicacy in a ready-to-use frozen format. Carefully scooped and flash-frozen to lock in its natural flavor and texture, our custard apple (also known as sitaphal or cherimoya) offers a smooth, luscious experience that&rsquo;s perfect for milkshakes, desserts, ice creams, or eaten on its own. With no peeling or seed removal needed, it&rsquo;s convenience at its finest.</p>\n<p class=\"\" data-start=\"604\" data-end=\"963\">Naturally rich in vitamins, minerals, and antioxidants, this fruit is not only delicious but also nutritious. Free from preservatives and additives, Fruitco ensures every pack delivers pure, high-quality custard apple that tastes just like it came fresh from the tree. Enjoy tropical indulgence all year round with the authentic taste of frozen custard apple.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 23,
+  "fields": {
+    "category": 18,
+    "brand": 12,
+    "title": "Fruitco Freshly Frozen Fruit Blends – Passion Fruit",
+    "slug": "fruitco-freshly-frozen-fruit-blends-passion-fruit",
+    "image": "product/Untitled_6.webp",
+    "description": "<p class=\"\" data-start=\"154\" data-end=\"613\"><strong data-start=\"154\" data-end=\"194\">Fruitco Freshly Frozen Passion Fruit</strong> captures the bold, tangy-sweet flavor of ripe passion fruit in a convenient frozen form. Carefully extracted and flash-frozen to preserve its tropical aroma, juicy pulp, and signature crunch of edible seeds, this exotic fruit is perfect for juices, mocktails, smoothies, desserts, and sauces. With no added sugar or preservatives, it brings the pure taste of passion fruit straight to your kitchen&mdash;anytime you need it.</p>\n<p class=\"\" data-start=\"615\" data-end=\"932\">Packed with vitamin C, antioxidants, and natural flavor, Fruitco&rsquo;s frozen passion fruit blend is a favorite among chefs, bartenders, and fruit lovers alike. Whether you're topping a pavlova, mixing a zesty drink, or stirring it into yogurt, every spoonful delivers freshness, nutrition, and a burst of tropical flair.</p>\n<p class=\"\" data-start=\"934\" data-end=\"972\">&nbsp;</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 24,
+  "fields": {
+    "category": 18,
+    "brand": 12,
+    "title": "Fruitco Freshly Frozen Fruit Blends – Muskmelon",
+    "slug": "fruitco-freshly-frozen-fruit-blends-muskmelon",
+    "image": "product/Untitled_7.webp",
+    "description": "<p class=\"\" data-start=\"150\" data-end=\"614\"><strong data-start=\"150\" data-end=\"186\">Fruitco Freshly Frozen Muskmelon</strong> offers the naturally sweet and refreshing flavor of ripe muskmelon, conveniently diced and frozen to preserve its taste, texture, and nutrients. Harvested at peak ripeness, each cube delivers the juicy goodness and subtle aroma that muskmelon is known for&mdash;perfect for smoothies, fruit bowls, desserts, and chilled beverages. With no peeling or cutting required, it saves time while ensuring consistent quality in every serving.</p>\n<p class=\"\" data-start=\"616\" data-end=\"927\">Naturally rich in hydration, vitamins A and C, and antioxidants, Fruitco&rsquo;s frozen muskmelon is a healthy, ready-to-use fruit option for all seasons. Whether you&rsquo;re preparing a tropical fruit salad or blending a refreshing summer drink, this frozen delight adds a cool and fruity twist to your kitchen creations.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 25,
+  "fields": {
+    "category": 18,
+    "brand": 12,
+    "title": "Fruitco Freshly Frozen Fruit Blends – Strawberry",
+    "slug": "fruitco-freshly-frozen-fruit-blends-strawberry",
+    "image": "product/Untitled_8.webp",
+    "description": "<p class=\"\" data-start=\"151\" data-end=\"568\"><strong data-start=\"151\" data-end=\"188\">Fruitco Freshly Frozen Strawberry</strong> brings you the juicy sweetness and vibrant flavor of handpicked strawberries, carefully frozen at peak ripeness to lock in freshness, color, and nutrition. Whether you're blending them into smoothies, baking into desserts, or topping your breakfast bowls, these ready-to-use berries add a burst of natural goodness to any recipe&mdash;without the need for washing, hulling, or slicing.</p>\n<p class=\"\" data-start=\"570\" data-end=\"911\">Rich in antioxidants, vitamin C, and dietary fiber, our frozen strawberries are a wholesome choice for health-conscious consumers. Free from preservatives and additives, they offer year-round access to your favorite fruit in a convenient, freezer-friendly pack. Enjoy the sweet taste of summer anytime with Fruitco&rsquo;s frozen strawberry blend.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 26,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Tender Coconut – V Juice Fruit Blends",
+    "slug": "vjuice-tender-coconut-v-juice-fruit-blends",
+    "image": "product/Untitled_9.webp",
+    "description": "<p class=\"\" data-start=\"147\" data-end=\"553\"><strong data-start=\"147\" data-end=\"172\">Vjuice Tender Coconut</strong> from the V Juice Fruit Blends range delivers the pure, refreshing essence of real tender coconut water, perfectly blended to hydrate and energize. Made from carefully selected young coconuts, this revitalizing drink is packed with natural electrolytes and a mild, sweet flavor that makes it a perfect choice for a tropical refreshment&mdash;whether you&rsquo;re relaxing at home or on the go.</p>\n<p class=\"\" data-start=\"555\" data-end=\"906\">Free from artificial colors, flavors, and preservatives, Vjuice ensures a clean, wholesome experience in every sip. Whether enjoyed chilled on its own or used as a mixer in smoothies and health drinks, this tender coconut blend offers a deliciously hydrating alternative to sugary beverages, ideal for active lifestyles and wellness-focused consumers.</p>\n<p class=\"\" data-start=\"908\" data-end=\"947\"><strong data-start=\"908\" data-end=\"928\">Available Sizes:</strong> 500GM</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 27,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Sapota – V Juice Fruit Blends",
+    "slug": "vjuice-sapota-v-juice-fruit-blends",
+    "image": "product/Untitled_10.webp",
+    "description": "<p class=\"\" data-start=\"139\" data-end=\"504\"><strong data-start=\"139\" data-end=\"156\">Vjuice Sapota</strong> from the V Juice Fruit Blends collection offers the rich, creamy sweetness of ripe sapota (chikoo) in a smooth and satisfying juice form. Crafted from carefully selected fruits, this delicious blend captures the authentic flavor and aroma of real sapota, making it a perfect treat for juice lovers who crave something naturally sweet and tropical.</p>\n<p class=\"\" data-start=\"506\" data-end=\"807\">Rich in vitamins, fiber, and antioxidants, Vjuice Sapota is not only flavorful but also nourishing. Free from added preservatives and artificial flavors, it delivers a wholesome drinking experience that&rsquo;s great for kids, adults, and anyone looking to enjoy the taste of fresh sapota&mdash;anytime, anywhere.</p>\n<p class=\"\" data-start=\"809\" data-end=\"848\"><strong data-start=\"809\" data-end=\"829\">Available Sizes:</strong> 500GM&nbsp;</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 28,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Strawberry – V Juice Fruit Blends",
+    "slug": "vjuice-strawberry-v-juice-fruit-blends",
+    "image": "product/Untitled_design_23.png",
+    "description": "<p class=\"\" data-start=\"143\" data-end=\"483\"><strong data-start=\"143\" data-end=\"164\">Vjuice Strawberry</strong> from the V Juice Fruit Blends range delivers the sweet, tangy taste of ripe strawberries in a refreshingly smooth juice blend. Made with real fruit pulp, this vibrant drink captures the essence of freshly picked strawberries&mdash;perfect for cooling down on a hot day or pairing with meals and snacks for a flavorful twist.</p>\n<p class=\"\" data-start=\"485\" data-end=\"812\">Naturally rich in vitamin C and antioxidants, Vjuice Strawberry is a guilt-free indulgence that&rsquo;s free from artificial flavors, colors, and preservatives. Whether you're sipping it chilled on its own or mixing it into creative beverages, this strawberry juice blend offers a delightful burst of fruity freshness in every glass.</p>\n<p class=\"\" data-start=\"814\" data-end=\"853\"><strong data-start=\"814\" data-end=\"834\">Available Sizes:</strong> 500GM</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 29,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Mango – V Juice Fruit Blends",
+    "slug": "vjuice-mango-v-juice-fruit-blends",
+    "image": "product/Untitled_design_24.png",
+    "description": "<p class=\"\" data-start=\"138\" data-end=\"515\"><strong data-start=\"138\" data-end=\"154\">Vjuice Mango</strong> from the V Juice Fruit Blends collection captures the rich, tropical flavor of sun-ripened mangoes in a smooth, refreshing juice. Bursting with natural sweetness and the signature taste of real mango pulp, this delicious beverage is perfect for those who love the bold, fruity essence of one of the world&rsquo;s favorite fruits&mdash;served chilled for maximum enjoyment.</p>\n<p class=\"\" data-start=\"517\" data-end=\"849\">Packed with vitamin A, vitamin C, and antioxidants, Vjuice Mango is both flavorful and nourishing. Made without artificial flavors or preservatives, it&rsquo;s a pure, tropical treat suitable for any time of day. Whether enjoyed on its own or used in mocktails and smoothies, this mango blend is your go-to drink for tropical refreshment.</p>\n<p class=\"\" data-start=\"851\" data-end=\"890\"><strong data-start=\"851\" data-end=\"871\">Available Sizes:</strong> 500GM</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 30,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Jackfruit – V Juice Fruit Blends",
+    "slug": "vjuice-jackfruit-v-juice-fruit-blends",
+    "image": "product/Untitled_design_25.png",
+    "description": "<p class=\"\" data-start=\"142\" data-end=\"521\"><strong data-start=\"142\" data-end=\"162\">Vjuice Jackfruit</strong> from the V Juice Fruit Blends range brings you the distinctive, sweet aroma and rich flavor of ripe jackfruit in a smooth and satisfying juice. Carefully blended using real jackfruit pulp, this tropical drink offers a unique taste experience that&rsquo;s both creamy and fruity&mdash;perfect for those who enjoy bold, exotic flavors in a convenient, ready-to-drink form.</p>\n<p class=\"\" data-start=\"523\" data-end=\"903\">Naturally packed with fiber, vitamin C, and antioxidants, Vjuice Jackfruit is as nourishing as it is flavorful. Free from artificial additives and preservatives, it&rsquo;s a wholesome choice for anyone looking to explore new fruit flavors or enjoy a familiar favorite in liquid form. Enjoy it chilled, straight from the bottle, or blend it into creative beverages for a tropical twist.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 31,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Jackfruit – V Juice Fruit Blends",
+    "slug": "vjuice-jackfruit-v-juice-fruit-blends",
+    "image": "product/Untitled_design_25_CvrdhZB.png",
+    "description": "<p class=\"\" data-start=\"142\" data-end=\"521\"><strong data-start=\"142\" data-end=\"162\">Vjuice Jackfruit</strong> from the V Juice Fruit Blends range brings you the distinctive, sweet aroma and rich flavor of ripe jackfruit in a smooth and satisfying juice. Carefully blended using real jackfruit pulp, this tropical drink offers a unique taste experience that&rsquo;s both creamy and fruity&mdash;perfect for those who enjoy bold, exotic flavors in a convenient, ready-to-drink form.</p>\n<p class=\"\" data-start=\"523\" data-end=\"903\">Naturally packed with fiber, vitamin C, and antioxidants, Vjuice Jackfruit is as nourishing as it is flavorful. Free from artificial additives and preservatives, it&rsquo;s a wholesome choice for anyone looking to explore new fruit flavors or enjoy a familiar favorite in liquid form. Enjoy it chilled, straight from the bottle, or blend it into creative beverages for a tropical twist.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 32,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Guava – V Juice Fruit Blends",
+    "slug": "vjuice-guava-v-juice-fruit-blends",
+    "image": "product/Untitled_design_26.png",
+    "description": "<p class=\"\" data-start=\"138\" data-end=\"482\"><strong data-start=\"138\" data-end=\"154\">Vjuice Guava</strong> from the V Juice Fruit Blends line delivers the vibrant taste and natural sweetness of ripe pink guavas in a refreshing and fruity beverage. Crafted with real guava pulp, this juice offers a smooth texture and a tropical punch that&rsquo;s both soothing and energizing&mdash;ideal for a midday boost or a refreshing complement to any meal.</p>\n<p class=\"\" data-start=\"484\" data-end=\"836\">Loaded with vitamin C, fiber, and antioxidants, Vjuice Guava is a smart and tasty choice for health-conscious drinkers. With no artificial flavors or preservatives, it brings you the pure, tropical flavor of guava in every sip. Whether enjoyed chilled on its own or used in mocktails and smoothie mixes, this juice is a delicious escape to the tropics.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 33,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Grape – V Juice Fruit Blends",
+    "slug": "vjuice-grape-v-juice-fruit-blends",
+    "image": "product/Untitled_design_27.png",
+    "description": "<p class=\"\" data-start=\"138\" data-end=\"483\"><strong data-start=\"138\" data-end=\"154\">Vjuice Grape</strong> from the V Juice Fruit Blends range delivers the bold, juicy flavor of ripe grapes in a refreshingly smooth drink. Made with real grape juice and no artificial additives, it&rsquo;s a vibrant and satisfying beverage that brings out the natural sweetness and tang of handpicked grapes&mdash;perfect for quenching your thirst any time of day.</p>\n<p class=\"\" data-start=\"485\" data-end=\"826\">Packed with antioxidants and rich in vitamin C, Vjuice Grape is as nourishing as it is delicious. Its deep, fruity taste makes it a family favorite, whether served chilled on a sunny afternoon or enjoyed with meals. With no added preservatives or artificial colors, it&rsquo;s a wholesome choice for those who crave real fruit flavor in every sip.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 34,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Freshly Frozen Fruit Blends JACKFRUIT",
+    "slug": "vjuice-freshly-frozen-fruit-blends",
+    "image": "product/preview_2.webp",
+    "description": "<p class=\"\" data-start=\"145\" data-end=\"555\"><strong data-start=\"145\" data-end=\"183\">Vjuice Freshly Frozen Fruit Blends JACKFRUIT</strong> bring you the authentic taste of nature in its purest form. Each pack is made from freshly harvested fruits, carefully cleaned, cut, and frozen at peak ripeness to lock in natural flavor, nutrients, and freshness. Whether it&rsquo;s mango, guava, sapota, or strawberry, our frozen fruit blends are perfect for smoothies, desserts, juices, or as a refreshing snack on their own.</p>\n<p class=\"\" data-start=\"557\" data-end=\"921\">With no added sugars, colors, or preservatives, Vjuice ensures a clean and healthy alternative to artificial mixes. These convenient, ready-to-use fruit packs save time in the kitchen and deliver consistent quality all year round. Ideal for home use, cafes, juice bars, or catering services, our fruit blends offer vibrant taste and natural goodness in every bite.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 35,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Freshly Frozen Fruit Blends – Guava,",
+    "slug": "vjuice-freshly-frozen-fruit-blends-guava",
+    "image": "product/preview_3.webp",
+    "description": "<p class=\"\" data-start=\"145\" data-end=\"572\"><strong data-start=\"145\" data-end=\"189\">Vjuice Freshly Frozen Guava Fruit Blends</strong> capture the vibrant flavor and tropical aroma of ripe guavas in their freshest form. Carefully selected and frozen at peak ripeness, these guava chunks retain their natural sweetness, juicy texture, and nutritional value&mdash;making them perfect for smoothies, juices, desserts, and fruit-based recipes. Every bite offers a burst of tropical freshness, just as if it were freshly picked.</p>\n<p class=\"\" data-start=\"574\" data-end=\"937\">Free from added sugar, preservatives, or artificial coloring, this frozen guava blend is a wholesome choice for health-conscious consumers. Packed with vitamin C, fiber, and antioxidants, it supports a healthy lifestyle while delivering a rich, fruity taste. Convenient and easy to use, Vjuice Guava Fruit Blends make enjoying real fruit simple&mdash;anytime, anywhere.</p>\n<p class=\"\" data-start=\"939\" data-end=\"977\">&nbsp;</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 36,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Freshly Frozen Mango Fruit Blends",
+    "slug": "vjuice-freshly-frozen-mango-fruit-blends",
+    "image": "product/preview_4.webp",
+    "description": "<p class=\"\" data-start=\"145\" data-end=\"524\"><strong data-start=\"145\" data-end=\"189\">Vjuice Freshly Frozen Mango Fruit Blends</strong> deliver the rich, tropical sweetness of ripe mangoes, picked at peak freshness and frozen to preserve their natural taste and nutrients. These golden mango chunks are perfect for making smoothies, juices, desserts, or enjoying straight from the pack. Every bite bursts with the juicy flavor and creamy texture that mango lovers crave.</p>\n<p class=\"\" data-start=\"526\" data-end=\"867\">Naturally rich in vitamins A and C, and free from added sugars or preservatives, this frozen mango blend is a delicious and healthy choice. Whether you're blending a refreshing drink, topping your breakfast bowl, or cooking a tropical recipe, Vjuice Mango Fruit Blends offer a convenient and flavorful way to enjoy real fruit all year round.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 37,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Freshly Frozen Strawberry Fruit Blends",
+    "slug": "vjuice-freshly-frozen-strawberry-fruit-blends",
+    "image": "product/preview_5.webp",
+    "description": "<p class=\"\" data-start=\"150\" data-end=\"529\"><strong data-start=\"150\" data-end=\"199\">Vjuice Freshly Frozen Strawberry Fruit Blends</strong> capture the bright, sweet, and slightly tangy flavor of ripe strawberries, carefully harvested and frozen at peak freshness to lock in their vibrant taste and nutritional benefits. Perfect for smoothies, desserts, and refreshing beverages, these strawberry pieces bring the essence of summer fruits to your kitchen all year long.</p>\n<p class=\"\" data-start=\"531\" data-end=\"864\">Rich in antioxidants and vitamin C, and free from any added sugars or preservatives, this frozen strawberry blend offers a healthy and convenient way to enjoy the natural goodness of strawberries anytime. Whether blended into a smoothie or used as a topping, Vjuice Strawberry Fruit Blends provide pure fruity flavor with every bite.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 38,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Freshly Frozen Chikoo Fruit Blends",
+    "slug": "vjuice-freshly-frozen-chikoo-fruit-blends",
+    "image": "product/Untitled_11.webp",
+    "description": "<p class=\"\" data-start=\"155\" data-end=\"581\"><strong data-start=\"155\" data-end=\"200\">Vjuice Freshly Frozen Chikoo Fruit Blends</strong> offer the rich, sweet, and creamy flavor of ripe chikoo (sapota) preserved at its freshest state. Carefully harvested and frozen at peak ripeness, these chikoo pieces retain their natural softness and luscious taste, making them perfect for smoothies, desserts, or as a quick, healthy snack. Enjoy the tropical sweetness of chikoo anytime with the convenience of frozen freshness.</p>\n<p class=\"\" data-start=\"583\" data-end=\"925\">Packed with dietary fiber, vitamins, and antioxidants, this frozen chikoo blend is free from added sugars and preservatives, ensuring a pure and natural fruit experience. Whether blended into your favorite drinks or enjoyed on their own, Vjuice Chikoo Fruit Blends bring the authentic taste of this beloved tropical fruit right to your table.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 39,
+  "fields": {
+    "category": 18,
+    "brand": 10,
+    "title": "Vjuice Freshly Frozen Tender Coconut Fruit Blends",
+    "slug": "vjuice-freshly-frozen-tender-coconut-fruit-blends",
+    "image": "product/Untitled_12.webp",
+    "description": "<p class=\"\" data-start=\"154\" data-end=\"550\"><strong data-start=\"154\" data-end=\"207\">Vjuice Freshly Frozen Tender Coconut Fruit Blends</strong> deliver the pure, refreshing taste and delicate texture of fresh tender coconut, carefully frozen to preserve its natural flavor and nutrients. Harvested at the perfect stage of ripeness, these tender coconut pieces are soft, juicy, and perfect for adding a tropical twist to smoothies, desserts, or enjoyed on their own as a hydrating snack.</p>\n<p class=\"\" data-start=\"552\" data-end=\"939\">Rich in electrolytes, vitamins, and minerals, this frozen tender coconut blend is free from any additives or preservatives, offering a clean and wholesome way to enjoy the natural goodness of coconut anytime. Convenient and versatile, Vjuice Tender Coconut Fruit Blends bring the refreshing essence of the tropics straight to your kitchen, making healthy living effortless and delicious.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 40,
+  "fields": {
+    "category": 23,
+    "brand": null,
+    "title": "Beef Hotdog Sausage",
+    "slug": "beef-hotdog-sausage",
+    "image": "product/Beef_Hotdog_Sausage.webp",
+    "description": "<p class=\"\" data-start=\"132\" data-end=\"594\"><strong data-start=\"132\" data-end=\"155\">Beef Hotdog Sausage</strong> is a deliciously savory option crafted from premium-quality beef, blended with select spices to deliver a juicy, flavorful bite every time. Perfect for grilling, pan-frying, or boiling, these sausages offer a satisfying meaty taste with a smooth texture that makes them a favorite for all ages. Whether served in a classic hotdog bun, sliced into pasta, or added to a breakfast plate, they bring rich flavor and versatility to your meals.</p>\r\n<p class=\"\" data-start=\"596\" data-end=\"890\">Ideal for quick snacks, party platters, or hearty meals, our beef hotdog sausages are fully cooked and ready to heat and enjoy. Free from artificial fillers and made with care, they provide a convenient and tasty protein source that's perfect for busy households or professional kitchens alike.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 41,
+  "fields": {
+    "category": 23,
+    "brand": null,
+    "title": "Beef Pastrami",
+    "slug": "beef-pastrami",
+    "image": "product/closeup-sliced-medium-rare-cooke.webp",
+    "description": "<p class=\"\" data-start=\"125\" data-end=\"561\"><strong data-start=\"125\" data-end=\"142\">Beef Pastrami</strong> is a premium deli-style meat, expertly seasoned and slow-cooked to perfection for a rich, smoky flavor and tender texture. Made from high-quality cuts of beef, it is carefully cured with a blend of traditional spices and then smoked to enhance its deep, savory taste. Whether layered in sandwiches, served on charcuterie boards, or added to wraps and salads, beef pastrami adds a bold, satisfying flavor to every dish.</p>\r\n<p class=\"\" data-start=\"563\" data-end=\"880\">Ideal for both gourmet meals and quick bites, our beef pastrami is sliced thin for easy use and maximum flavor. It&rsquo;s a perfect choice for food lovers seeking quality, convenience, and authentic taste. With no artificial preservatives and made with care, this pastrami delivers a classic deli experience in every bite.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 42,
+  "fields": {
+    "category": 18,
+    "brand": null,
+    "title": "Yum Bites Beef Sausage – Frozen & Cooked",
+    "slug": "yum-bites-beef-sausage-frozen-cooked",
+    "image": "product/chilli-flavoured-sausages-german.webp",
+    "description": "<p class=\"\" data-start=\"102\" data-end=\"529\"><strong data-start=\"102\" data-end=\"146\">Yum Bites Beef Sausage &ndash; Frozen &amp; Cooked</strong> is the perfect ready-to-eat snack for those who crave rich, meaty flavor in every bite. Made from high-quality beef and seasoned with a signature blend of spices, these 35g sausages are fully cooked and quick-frozen to lock in flavor, juiciness, and freshness. Whether you&rsquo;re preparing a quick breakfast, party platter, or lunchbox treat, Yum Bites make it effortless and delicious.</p>\n<p class=\"\" data-start=\"531\" data-end=\"876\">Convenient and versatile, these frozen beef sausages can be pan-fried, microwaved, or grilled in minutes&mdash;no prep needed. With their satisfying taste and tender texture, Yum Bites are a favorite among kids and adults alike. Ideal for on-the-go meals or last-minute gatherings, they bring both taste and convenience straight from freezer to plate.</p>\n<p class=\"\" data-start=\"878\" data-end=\"947\"><strong data-start=\"878\" data-end=\"897\">Available Size:</strong> 35g per piece (pack options available on request)</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 43,
+  "fields": {
+    "category": 23,
+    "brand": null,
+    "title": "Lamb Leg Bone-In",
+    "slug": "lamb-leg-bone-in",
+    "image": "product/lamb-bone-sauteed-bone-broth-wit.webp",
+    "description": "<p class=\"\" data-start=\"128\" data-end=\"563\"><strong data-start=\"128\" data-end=\"148\">Lamb Leg Bone-In</strong> is a premium cut known for its rich flavor, tenderness, and versatility in cooking. Perfect for slow roasting, grilling, or braising, this bone-in leg retains moisture during cooking, delivering juicy, flavorful meat that&rsquo;s ideal for festive meals, special occasions, or gourmet everyday dishes. Whether seasoned with herbs or marinated for hours, it cooks beautifully to a golden finish with a succulent interior.</p>\r\n<p class=\"\" data-start=\"565\" data-end=\"930\">Sourced from high-quality lamb and prepared with care, this cut offers both flavor and presentation, making it a centerpiece for any table. The bone enhances the depth of flavor while also aiding in even cooking, making it a favorite among chefs and home cooks alike. Serve it sliced with sides or shred it for wraps, stews, or curries&mdash;it&rsquo;s a true culinary classic.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 44,
+  "fields": {
+    "category": 23,
+    "brand": null,
+    "title": "Mutton Leg Boneless",
+    "slug": "mutton-leg-boneless",
+    "image": "product/raw-lamb-leg-wooden-board-prepar.webp",
+    "description": "<p class=\"\" data-start=\"130\" data-end=\"531\"><strong data-start=\"130\" data-end=\"153\">Mutton Leg Boneless</strong> is a premium, lean cut of meat known for its deep, robust flavor and tender texture. Carefully trimmed and expertly prepared, this boneless leg is ideal for a wide variety of dishes&mdash;whether it&rsquo;s slow-cooked in rich gravies, grilled to perfection, or stir-fried for quick meals. Its convenience and ease of use make it a top choice for both everyday cooking and gourmet recipes.</p>\r\n<p class=\"\" data-start=\"533\" data-end=\"909\">Free from bones and excess fat, this cut offers maximum yield with minimal prep time, making it perfect for curries, kebabs, biryanis, or roasts. Sourced from high-quality mutton, it ensures a consistent texture and bold, meaty taste in every bite. Whether you're cooking for the family or entertaining guests, mutton leg boneless delivers exceptional flavor and satisfaction.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 45,
+  "fields": {
+    "category": 23,
+    "brand": null,
+    "title": "Smoked Chicken Breast",
+    "slug": "smoked-chicken-breast",
+    "image": "product/close-up-view-thanksgiving-meal.webp",
+    "description": "<p class=\"\" data-start=\"133\" data-end=\"525\"><strong data-start=\"133\" data-end=\"158\">Smoked Chicken Breast</strong> offers a tender, juicy cut of premium chicken, infused with a rich, smoky flavor that elevates any meal. Carefully seasoned and slow-smoked to perfection, this ready-to-eat delicacy brings together convenience and gourmet taste. Ideal for salads, sandwiches, wraps, or charcuterie boards, it adds depth and protein-packed goodness to your dishes with minimal effort.</p>\r\n<p class=\"\" data-start=\"527\" data-end=\"881\">Crafted from skinless, boneless chicken breast, it&rsquo;s a lean and healthy option without compromising on taste. Whether you&rsquo;re preparing a quick lunch or assembling a sophisticated appetizer, smoked chicken breast is the perfect choice for those who appreciate fine flavor and high-quality ingredients. It&rsquo;s fully cooked, easy to slice, and ready to serve.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 46,
+  "fields": {
+    "category": 23,
+    "brand": null,
+    "title": "Duck Breast",
+    "slug": "duck-breast",
+    "image": "product/duck-breast-meat-garnish-poultry.webp",
+    "description": "<p class=\"\" data-start=\"122\" data-end=\"485\"><strong data-start=\"122\" data-end=\"137\">Duck Breast</strong> is a rich and flavorful delicacy prized for its tender meat and crispy skin. With a bold taste that stands out from traditional poultry, duck breast is a gourmet favorite, perfect for pan-searing, roasting, or grilling. Whether served with a sweet glaze, spiced rub, or savory sauce, it offers a luxurious dining experience that elevates any meal.</p>\r\n<p class=\"\" data-start=\"487\" data-end=\"877\">Sourced from high-quality duck and expertly prepared, this cut is ideal for fine dining at home or in professional kitchens. The natural fat layer renders beautifully during cooking, infusing the meat with moisture and enhancing its deep, gamey flavor. Duck breast pairs well with fruits, wine reductions, or earthy sides, making it a versatile choice for both classic and creative recipes.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 47,
+  "fields": {
+    "category": 23,
+    "brand": null,
+    "title": "Turkey Ham Smoked kg",
+    "slug": "turkey-ham-smoked-kg",
+    "image": "product/sausage-selection-top-view_14179.webp",
+    "description": "<p class=\"\" data-start=\"136\" data-end=\"571\"><strong data-start=\"136\" data-end=\"157\">Smoked Turkey Ham</strong> is a lean, flavorful alternative to traditional ham, made from high-quality turkey meat and infused with a subtle, smoky aroma. Expertly cured and slow-smoked, it delivers a tender texture and rich taste that's perfect for sandwiches, breakfast platters, salads, or gourmet recipes. Its balanced seasoning and natural smokiness make it a favorite among those looking for a lighter, yet satisfying, protein option.</p>\r\n<p class=\"\" data-start=\"573\" data-end=\"873\">This fully cooked, ready-to-slice product is ideal for both cold and hot dishes, offering versatility for delis, restaurants, or home kitchens. Whether served as deli meat or incorporated into wraps, pizzas, or omelets, smoked turkey ham adds depth and nutrition to your meals with minimal prep time.</p>\r\n<p class=\"\" data-start=\"875\" data-end=\"959\"><strong data-start=\"875\" data-end=\"895\">Available Sizes:</strong> Sold per kg | Sliced or whole slab options available on request</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 48,
+  "fields": {
+    "category": 21,
+    "brand": null,
+    "title": "Fish Basa Fillet (Kg, Case of 10kg Bulk Pack)",
+    "slug": "fish-basa-fillet-kg-case-of-10kg-bulk-pack",
+    "image": "product/flavorful-fish-with-colorful-veg.webp",
+    "description": "<p class=\"\" data-start=\"155\" data-end=\"559\"><strong data-start=\"155\" data-end=\"175\">Basa Fish Fillet</strong> is a versatile, mild-flavored white fish known for its soft texture and delicate taste. Boneless and skinless, it&rsquo;s an ideal choice for health-conscious consumers and professional kitchens alike. Whether baked, grilled, fried, or used in curries, basa fillet adapts effortlessly to a variety of cuisines and cooking methods, making it a staple in bulk food service and retail supply.</p>\r\n<p class=\"\" data-start=\"561\" data-end=\"907\">Packed in a convenient <strong data-start=\"584\" data-end=\"602\">10kg bulk case</strong>, these high-quality fillets are individually quick frozen (IQF) to maintain freshness, texture, and flavor. Perfect for restaurants, caterers, and wholesalers, basa fillet offers great value without compromising on taste or quality. Easy to portion and prepare, it&rsquo;s a smart choice for high-volume needs.</p>\r\n<p class=\"\" data-start=\"909\" data-end=\"992\"><strong data-start=\"909\" data-end=\"929\">Available Sizes:</strong> 10kg Bulk Pack (Case) | Custom quantities available on request</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 49,
+  "fields": {
+    "category": 21,
+    "brand": null,
+    "title": "Crab Stick (per kg)",
+    "slug": "crab-stick-per-kg",
+    "image": "product/tasty-crab-sticks-with-ice-dark.webp",
+    "description": "<p class=\"\" data-start=\"129\" data-end=\"597\"><strong data-start=\"129\" data-end=\"143\">Crab Stick</strong>, also known as imitation crab or surimi, is a delicious and convenient seafood option made from finely minced white fish, blended with crab flavor and shaped into stick form. It offers the sweet, delicate taste of crabmeat at a more affordable price, making it a popular choice for sushi rolls, salads, seafood platters, and snack trays. Fully cooked and ready to use, crab sticks are a time-saving ingredient that delivers consistent quality and taste.</p>\r\n<p class=\"\" data-start=\"599\" data-end=\"923\">Perfect for both hot and cold dishes, these versatile sticks can be shredded, sliced, or served whole depending on your recipe needs. Whether you're running a restaurant, catering event, or stocking up for retail, crab sticks provide excellent value, long shelf life, and easy preparation&mdash;all without compromising on flavor.</p>\r\n<p class=\"\" data-start=\"925\" data-end=\"991\"><strong data-start=\"925\" data-end=\"945\">Available Sizes:</strong> Sold per kg | Bulk packs available on request</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 50,
+  "fields": {
+    "category": 1,
+    "brand": null,
+    "title": "Arabic Coffee 500 Gram",
+    "slug": "arabic-coffee-500-gram",
+    "image": "product/arabian-black-coffee_127425-365.webp",
+    "description": "<p class=\"\" data-start=\"126\" data-end=\"598\"><strong data-start=\"126\" data-end=\"150\">Arabic Coffee (500g)</strong> is a rich and aromatic blend crafted to deliver the authentic taste and tradition of Middle Eastern coffee culture. Made from carefully selected, premium coffee beans, this blend is lightly roasted and infused with traditional spices like cardamom to create a smooth, bold flavor with a distinct, fragrant aroma. Perfect for sharing with family and guests, Arabic coffee offers a warm and inviting experience that celebrates centuries of heritage.</p>\n<p class=\"\" data-start=\"600\" data-end=\"974\">Ideal for brewing in a dallah or coffee pot, this 500-gram pack ensures you have enough to enjoy multiple servings of this cherished beverage. Whether for special occasions or everyday indulgence, Arabic coffee is the perfect choice for those who appreciate a refined and culturally rich coffee experience. Its balanced taste pairs wonderfully with dates and light desserts.</p>\n<p class=\"\" data-start=\"976\" data-end=\"1014\">&nbsp;</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 51,
+  "fields": {
+    "category": 1,
+    "brand": null,
+    "title": "Noodles Brown Ramen",
+    "slug": "noodles-brown-ramen",
+    "image": "product/top-view-delicious-noodles-conce.webp",
+    "description": "<p class=\"\" data-start=\"124\" data-end=\"590\"><strong data-start=\"124\" data-end=\"147\">Brown Ramen Noodles</strong> offer a wholesome twist on the classic Japanese ramen, crafted using whole grain or brown flour for a richer texture and deeper flavor. These noodles are perfect for those seeking a nutritious yet delicious meal option, combining the satisfying chewiness of traditional ramen with the added benefits of fiber and nutrients. Ideal for quick, flavorful soups or stir-fries, brown ramen noodles bring heartiness and authenticity to your kitchen.</p>\n<p class=\"\" data-start=\"592\" data-end=\"932\">Ready to absorb broths and sauces, these noodles pair excellently with a variety of ingredients&mdash;from savory meats and fresh vegetables to rich miso or soy-based soups. Whether you&rsquo;re cooking a comforting bowl for yourself or preparing a feast for friends and family, brown ramen noodles deliver both taste and health benefits in every bite.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 52,
+  "fields": {
+    "category": 18,
+    "brand": null,
+    "title": "Frozen Strawberries",
+    "slug": "frozen-strawberries",
+    "image": "product/frozen-strawberry-with-crystals.webp",
+    "description": "<p class=\"\" data-start=\"121\" data-end=\"561\"><strong data-start=\"121\" data-end=\"144\">Frozen Strawberries</strong> are carefully picked at peak ripeness and immediately frozen to lock in their natural sweetness, vibrant color, and fresh flavor. Perfect for smoothies, desserts, baking, or as a refreshing addition to your favorite recipes, these berries retain their juicy texture and nutritional benefits even after freezing. They provide a convenient way to enjoy strawberries year-round without compromising on taste or quality.</p>\n<p class=\"\" data-start=\"563\" data-end=\"930\">Ideal for both home cooks and professional chefs, frozen strawberries are versatile and easy to use. Whether blended into smoothies, folded into yogurt, or baked into pies and cakes, they add a burst of natural sweetness and a touch of elegance to any dish. With consistent quality and long shelf life, frozen strawberries are a must-have ingredient in every kitchen.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 53,
+  "fields": {
+    "category": 18,
+    "brand": null,
+    "title": "Blueberry Frozen",
+    "slug": "blueberry-frozen",
+    "image": "product/3d-delicious-seasonal-fruits_23.webp",
+    "description": "<p class=\"\" data-start=\"129\" data-end=\"521\"><strong data-start=\"129\" data-end=\"151\">Frozen Blueberries</strong> are harvested at the peak of ripeness and quickly frozen to preserve their juicy flavor, vibrant color, and nutritional value. These antioxidant-rich berries are perfect for smoothies, baking, or as a delicious topping for cereals, yogurts, and desserts. Their natural sweetness and slightly tart flavor make them a versatile ingredient in both sweet and savory dishes.</p>\n<p class=\"\" data-start=\"523\" data-end=\"902\">Ideal for year-round use, frozen blueberries offer the same taste and health benefits as fresh berries without the worry of spoilage. Whether you're creating a nutrient-packed smoothie, baking muffins, or stirring them into oatmeal, these berries are ready to use straight from the freezer. They&rsquo;re a convenient, time-saving solution for home kitchens and professional use alike.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 54,
+  "fields": {
+    "category": 22,
+    "brand": null,
+    "title": "Mango Puree",
+    "slug": "mango-puree",
+    "image": "product/bowl-fresh-mango-smoothie-with-f.webp",
+    "description": "<p class=\"\" data-start=\"116\" data-end=\"546\"><strong data-start=\"116\" data-end=\"131\">Mango Puree</strong> is a rich, velvety blend made from ripe, juicy mangoes carefully selected for their natural sweetness and tropical flavor. Smooth in texture and vibrant in color, this puree captures the essence of sun-ripened mangoes, making it a perfect ingredient for smoothies, desserts, beverages, and sauces. Its naturally sweet taste requires no added sugar, offering a pure and authentic mango experience in every spoonful.</p>\r\n<p class=\"\" data-start=\"548\" data-end=\"893\">Ideal for both home cooks and foodservice professionals, mango puree adds a burst of tropical flavor to recipes with ease. Whether you're making mango lassi, ice cream, puddings, or even savory glazes, this ready-to-use puree saves prep time while delivering consistent quality and taste. It&rsquo;s also a great base for baby food and healthy snacks.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 55,
+  "fields": {
+    "category": 18,
+    "brand": null,
+    "title": "Raspberry Frozen",
+    "slug": "raspberry-frozen",
+    "image": "product/snowy-fresh-blackberries-close-u.webp",
+    "description": "<p class=\"\" data-start=\"129\" data-end=\"499\"><strong data-start=\"129\" data-end=\"151\">Frozen Raspberries</strong> are picked at peak ripeness and flash-frozen to preserve their bright color, tangy-sweet flavor, and powerful antioxidants. These berries are a convenient and nutritious choice for smoothies, desserts, sauces, and breakfast bowls. With their bold taste and beautiful ruby hue, they add a delightful burst of flavor and visual appeal to any recipe.</p>\n<p class=\"\" data-start=\"501\" data-end=\"829\">Ideal for both home and professional kitchens, frozen raspberries maintain their shape and flavor even after thawing. Whether you&rsquo;re baking tarts, blending smoothies, or crafting vibrant fruit coulis, they offer the freshness of seasonal fruit with the convenience of year-round availability. Enjoy the taste of summer, anytime.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 56,
+  "fields": {
+    "category": 1,
+    "brand": null,
+    "title": "Corn On The Cob",
+    "slug": "corn-on-the-cob",
+    "image": "product/boiled-corn-black-plate_1048944.webp",
+    "description": "<p class=\"\" data-start=\"126\" data-end=\"485\"><strong data-start=\"126\" data-end=\"145\">Corn on the Cob</strong> offers a classic and wholesome taste of golden sweetness straight from the farm. Carefully selected and harvested at peak ripeness, each cob is bursting with natural flavor and tender kernels. Perfectly suited for grilling, boiling, or roasting, corn on the cob makes a delicious side dish or a hearty addition to meals, loved by all ages.</p>\n<p class=\"\" data-start=\"487\" data-end=\"845\">Whether served with a pat of butter, seasoned with herbs, or enjoyed plain, <strong data-start=\"563\" data-end=\"582\">corn on the cob</strong> brings comfort and nutrition to the table. It's a rich source of fiber, vitamins, and essential minerals, making it both satisfying and nourishing. Quick to prepare and always a favorite, it&rsquo;s a versatile option for family dinners, barbecues, or festive spreads.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 57,
+  "fields": {
+    "category": 24,
+    "brand": null,
+    "title": "French Fries (Box/10kg)",
+    "slug": "french-fries-box10kg",
+    "image": "product/french-fries-portion-ai-generate.webp",
+    "description": "<p class=\"\" data-start=\"82\" data-end=\"503\"><strong data-start=\"82\" data-end=\"109\">French Fries (Box/10kg)</strong> are the perfect choice for restaurants, food service businesses, and bulk buyers looking for premium-quality, crispy fries with every batch. Made from carefully selected potatoes, these fries are cut to uniform size and flash-frozen to lock in their fresh flavor and texture. Whether deep-fried or air-fried, they turn golden and crispy on the outside while remaining fluffy and tender inside.</p>\r\n<p class=\"\" data-start=\"505\" data-end=\"889\">Ideal for fast food menus, party platters, or everyday side dishes, these fries deliver consistency and convenience in large-scale cooking. The 10kg bulk pack is easy to store and portion, making it a cost-effective solution for high-volume kitchens without compromising on taste or quality. Serve them with burgers, wraps, or as a snack on their own &ndash; they&rsquo;re always a crowd-pleaser.</p>"
+  }
+},
+{
+  "model": "web.product",
+  "pk": 58,
+  "fields": {
+    "category": 18,
+    "brand": null,
+    "title": "Frozen Spinach (Box)",
+    "slug": "frozen-spinach-box",
+    "image": "product/frozen-spinach-wooden-background.webp",
+    "description": "<p class=\"\" data-start=\"79\" data-end=\"506\"><strong data-start=\"79\" data-end=\"97\">Frozen Spinach</strong> is a nutrient-packed, time-saving kitchen essential that retains all the freshness and goodness of freshly harvested spinach. Washed, chopped, and quickly frozen to preserve its deep green color, flavor, and nutrients, this spinach is ready to use straight from the box. It's perfect for soups, curries, sauces, smoothies, and baked dishes &mdash; adding a healthy boost of iron, fiber, and vitamins to every meal.</p>\n<p class=\"\" data-start=\"508\" data-end=\"908\">Ideal for both home and commercial kitchens, <strong data-start=\"553\" data-end=\"571\">Frozen Spinach</strong> offers consistent quality and convenience in bulk quantities. With minimal prep and no wastage, it&rsquo;s a cost-effective solution for chefs and food service providers looking to maintain efficiency without compromising on nutrition. The box packaging ensures easy storage and long shelf life, making it a smart choice for everyday cooking.</p>"
+  }
+}
+]

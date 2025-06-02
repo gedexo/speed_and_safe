@@ -31,7 +31,7 @@ class ProductAdmin(ImportExportModelAdmin):
     list_display = ('title', 'category',)
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title',)
-    list_filter = ('title',)
+    list_filter = ('title', 'category',)
 
 @admin.register(ProductEnquiry)
 class ProductEnquiryAdmin(admin.ModelAdmin):

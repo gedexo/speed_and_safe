@@ -48,14 +48,14 @@
   <div class="about4 sp">
    <div class="container">
        <div class="row align-items-center">
-           <div class="col-lg-6">
-               <div class="about4-images mr-30 sm:mr-30 md:mr-0">
+           <div class="col-lg-4">
+               <div class="about4-images mr-30 md:mr-0 ms:mr-0">
                    <div class="image1" data-aos="zoom-out" data-aos-duration="800">
                        <img src="{% static 'web/assets/img/about/about4-image1.png' %}" alt="">
                    </div>
-                   <div class="image2 d-none d-md-block" data-aos="zoom-out" data-aos-duration="1000">
+                   {% comment %} <div class="image2 d-none d-md-block" data-aos="zoom-out" data-aos-duration="1000">
                      <img src="{% static 'web/assets/img/about/about4-image2.png' %}" alt="">
-                 </div>
+                 </div> {% endcomment %}
                  
                    <div class="about4-image-text" data-aos="zoom-out" data-aos-duration="800">
                        <h3>15,360</h3>
@@ -63,7 +63,7 @@
                    </div>
                </div>
            </div>
-           <div class="col-lg-6">
+           <div class="col-lg-8">
                <div class="heading1 md:mt-30 sm:mt-30">
                    <span class="sub-title2 left-side" data-aos="fade-left" data-aos-duration="800">Reliable Logistics Solutions</span>
                    <h2 data-aos="fade-left" data-aos-duration="1000">Delivering Dependability Reliable Logistics Service</h2>
@@ -95,11 +95,9 @@
          <div class="row mt-20">
             <div class="col-lg mt-30">
                <div class="delivery1-item-box2">
-                  {% comment %} <div class="icon text-end mr-30">
-                     <span><img src="{% static 'web/assets/img/icon/delivery2-icon1.svg' %}" alt=""></span>
-                  </div> {% endcomment %}
+                  
                   <div class="box-area" data-aos="flip-right" data-aos-duration="800">
-                     <div class="box mr-30">
+                     <div class="box mr-30 sm:mr-0">
                         <h4><a >Farm</a></h4>
                         <p class="mt-10">We collaborate directly with a trusted network of farmers to source the freshest, highest-quality raw materials, eliminating the need for intermediaries.</p>
                      </div>
@@ -111,7 +109,7 @@
 
                <div class="delivery1-item-box2 mt-40">
                   <div class="box-area" data-aos="flip-right" data-aos-duration="1000">
-                     <div class="box mr-30">
+                     <div class="box mr-30 sm:mr-0">
                         <h4><a>Production Units</a></h4>
                         <p class="mt-10">Our products adhere to the highest quality and hygiene standards, utilizing the latest technology to process and grade raw materials efficiently.</p>
                      </div>
@@ -119,9 +117,7 @@
                         <h5>02</h5>
                      </div>
                   </div>
-                  {% comment %} <div class="icon text-end mr-30">
-                     <span><img src="{% static 'web/assets/img/icon/delivery2-icon2.svg' %}" alt=""></span>
-                  </div> {% endcomment %}
+                 
                </div>
             </div>
             <div class="col-lg-4">
@@ -146,14 +142,12 @@
 
             <div class="col-lg mt-30">
                <div class="delivery1-item-box2">
-                  {% comment %} <div class="icon ml-30">
-                     <span><img src="{% static 'web/assets/img/icon/delivery2-icon3.svg' %}" alt=""></span>
-                  </div> {% endcomment %}
+                 
                   <div class="box-area" data-aos="flip-left" data-aos-duration="800">
                      <div class="num">
                         <h5>03</h5>
                      </div>
-                     <div class="box ml-30">
+                     <div class="box ml-30 sm:ml-0">
                         <h4><a>FMCG Distributors</a></h4>
                         <p class="mt-10">We are dedicated to offering families a broad selection of essential consumer products for their everyday requirements. Our product range features a variety of cereals, pulses, spices, and more.</p>
                      </div>
@@ -161,14 +155,12 @@
                </div>
 
                <div class="delivery1-item-box2 mt-40">
-                  {% comment %} <div class="icon ml-30">
-                     <span><img src="{% static 'web/assets/img/icon/delivery2-icon4.svg' %}" alt=""></span>
-                  </div> {% endcomment %}
+                  
                   <div class="box-area" data-aos="flip-left" data-aos-duration="1000">
                      <div class="num">
                         <h5>04</h5>
                      </div>
-                     <div class="box ml-30">
+                     <div class="box ml-30 sm:ml-0">
                         <h4><a>Export to GCC & African Countries</a></h4>
                         <p class="mt-10">We are honored to export our consumer products to the GCC and African countries, where they have been warmly received by those who value our dedication to quality and affordability.</p>
                      </div>
@@ -326,90 +318,54 @@
             </div>
             <div class="tab-sec">
                 <div class="container">
-                    <ul class="nav nav-pills mb-3" id="product-tab" role="tablist">
+                    <div class="category-tab-wrapper">
+                     <ul class="nav nav-pills mb-3 owl-carousel" id="product-tab" role="tablist">
                         {% for category in product_categories %}
                            <li class="nav-item" role="presentation">
-                                 <button class="nav-link {% if forloop.first %}active{% endif %}" 
-                                       id="pills-tab-{{ category.slug }}-products" 
-                                       data-bs-toggle="pill" 
-                                       data-bs-target="#pills-{{ category.slug }}-products" 
-                                       type="button" 
-                                       role="tab" 
-                                       aria-controls="pills-{{ category.slug }}-products" 
-                                       aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
-                                    {{ category.title }}
-                                 </button>
+                              <button class="nav-link {% if forloop.first %}active{% endif %}" 
+                                    id="pills-tab-{{ category.slug }}-products" 
+                                    data-bs-toggle="pill" 
+                                    data-bs-target="#pills-{{ category.slug }}-products" 
+                                    type="button" 
+                                    role="tab" 
+                                    aria-controls="pills-{{ category.slug }}-products" 
+                                    aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+                                 {{ category.title }}
+                              </button>
                            </li>
                         {% endfor %}
                      </ul>
+                     </div>
                 </div>
 
                <div class="tab-content" id="product-tabContent">
-    {% for category in product_categories %}
-    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="pills-{{ category.slug }}-products" role="tabpanel" aria-labelledby="pills-tab-{{ category.slug }}-products">
-        <div class="container">
-            <div class="row">
-                {% for product in category.get_products %}
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="product-box text-center">
-                        <a href="#">
-                            <div class="icon-box mb-2">
-                                <div class="image-box">
-                                    <img alt="image" class="img-fluid" src="{{ product.image.url }}" />
-                                </div>
-                            </div>
-                            <div class="name font-weight-bold">{{ product.title }}</div>
-                            <div class="quantity text-muted">{{ product.quantity }}</div>
-                        </a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-            </div>
-
-            <div class="tab-mob">
-                <div class="container">
-                    <select class="js-example-basic-single">
-                     {% for category in product_categories %}
-                        <option value="{{category.slug}}-products">{{category.title}}</option>
-                     {% endfor %}
-                    </select>
-
-                    <div class="content-box">
-                     {% for category in product_categories %}
-                        <div class="{{category.slug}}-products box">
-                            <div class="owl-carousel" id="productSliderMob-{{category.slug}}">
+               {% for category in product_categories %}
+                  <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="pills-{{category.slug}}-products" role="tabpanel" aria-labelledby="pills-tab-{{category.slug}}-products">
+                        <div class="container">
+                           <div class="owl-carousel" id="productSlider-{{ category.slug }}">
                               {% for product in category.get_products %}
-                                <div class="item">
-                                    <a href="#" class="product-box">
-                                        <div class="icon-box">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 272 316">
-                                                <path
-                                                    d="M234.481,267.984 C226.278,271.686 218.624,276.619 210.850,281.207 C193.222,291.611 175.270,301.039 155.231,306.489 C137.350,311.352 119.370,311.549 101.368,309.519 C80.602,307.177 62.182,298.396 45.302,286.360 C35.370,279.278 25.106,272.715 13.467,268.677 C9.307,267.234 4.911,266.547 0.562,266.563 L0.562,10.000 C0.562,4.477 5.040,-0.000 10.562,-0.000 L261.562,-0.000 C267.085,-0.000 271.562,4.477 271.562,10.000 L271.562,260.877 C258.558,260.190 246.187,262.703 234.481,267.984 Z" />
-                                            </svg>
-                                            <div class="img-box">
-                                                <img alt="image" class="img-fluid" src="{{product.image.url}}" data-src="{{product.image.url}}" />
-                                            </div>
-                                        </div>
-
-                                        <div class="name">{{product.title}}</div>
-                                        <div class="quantity">{{product.quantity}}</div>
-                                    </a>
-                                </div>
+                                    <div class="item">
+                                       <div class="product-box">
+                                          <a href="{{product.get_absolute_url}}">
+                                                <div class="icon-box">
+                                                   <div class="image-box">
+                                                      <img alt="image" class="img-fluid" src="{{ product.image.url }}" data-src="{{ product.image.url }}" />
+                                                   </div>
+                                                </div>
+                                                <div class="name">{{ product.title }}</div>
+                                                <div class="quantity">{{ product.quantity }}</div>
+                                          </a>
+                                       </div>
+                                    </div>
                               {% endfor %}
-
-                            </div>
+                           </div>
                         </div>
-                        {% endfor %}
-
-
-                    </div>
-                </div>
+                  </div>
+               {% endfor %}
             </div>
+            </div>
+
+            
         </div>
     </section>
 
@@ -523,7 +479,7 @@
 
 {% block js %}
 <!-- OWL-->
-   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"> </script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"> </script>
 <script>
    window.onload = function () {
       const swiper = new Swiper('.blogSwiper', {
@@ -549,99 +505,73 @@
       });
    };
 
-   $('#productSlider1').owlCarousel({
-        loop: true,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    })
+</script>
 
-   $('#productSliderMob1').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      autoplayHoverPause: true,
-      responsive: {
-         0: {
-               items: 1
-         },
-         576: {
-               items: 2
-         },
-         768: {
-               items: 3
-         },
-         1000: {
-               items: 5
-         }
-      }
-   })
-
-   document.addEventListener("DOMContentLoaded", function () {
-    {% for category in product_categories %}
-        $('#productSlider-{{ category.slug }}').owlCarousel({
-            loop: true,
-            nav: true,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            responsive: {
-                  0: {
-                     items: 1
-                  },
-                  600: {
-                     items: 1
-                  },
-                  1000: {
-                     items: 1
-                  }
-            }
-        });
-    {% endfor %}
-});
-
+<script>
 document.addEventListener("DOMContentLoaded", function () {
     {% for category in product_categories %}
-        $('#productSliderMob-{{ category.slug }}').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            autoplay: true,
+        var productCount = {{ category.get_products|length }};
+        var loopEnabled = productCount > 3;
+
+        $('#productSlider-{{ category.slug }}').owlCarousel({
+            loop: loopEnabled,
+            nav: false,
+            autoplay: loopEnabled,
             autoplayTimeout: 2000,
             autoplayHoverPause: true,
+            dots: true,
             responsive: {
-               0: {
-                     items: 1
-               },
-               576: {
-                     items: 2
-               },
-               768: {
-                     items: 3
-               },
-               1000: {
-                     items: 5
-               }
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
             }
         });
     {% endfor %}
 });
+</script>
 
+<script>
+$(document).ready(function () {
+    $('#product-tab').owlCarousel({
+        loop: true,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        dots: false,
+        margin: 10,
+        responsive: {
+            0: {
+                items: 2,
+                autoWidth: true
+            },
+            600: {
+                items: 4,
+                autoWidth: true
+            },
+            1000: {
+                items: 6,
+                autoWidth: true
+            }
+        }
+    });
+});
 </script>
 
 
+<script>
+   document.querySelectorAll('#product-tab button.nav-link').forEach(button => {
+   button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      document.querySelectorAll('#product-tab button.nav-link').forEach(btn => btn.classList.remove('active'));
+      // Add active class to clicked button
+      button.classList.add('active');
+   });
+   });
+</script>
 {% endblock js %}

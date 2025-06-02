@@ -51,7 +51,6 @@ class Blog(models.Model):
 class ProductCategory(models.Model):
     title = models.CharField(max_length=180)
     slug = models.SlugField()
-    image = models.ImageField(upload_to="product_category/", null=True)
 
     def __str__(self):
         return self.title
@@ -72,7 +71,6 @@ class Product(models.Model):
     brand = models.ForeignKey("web.Brand", on_delete=models.CASCADE, related_name='products', blank=True, null=True)
     title = models.CharField(max_length=180)
     slug = models.SlugField()
-    quantity = models.CharField(max_length=80, null=True)
     image = models.ImageField(upload_to="product/")
     description = HTMLField()
 
