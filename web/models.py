@@ -4,8 +4,8 @@ from django.urls import reverse_lazy
 
 class Banner(models.Model):
     title = models.CharField(max_length=180)
-    sub_title = models.CharField(max_length=180)
-    image = models.ImageField(upload_to="banners/")
+    sub_title = models.CharField(max_length=180,)
+    image = models.FileField(upload_to="banners/", null=True)
 
     def __str__(self):
         return self.title

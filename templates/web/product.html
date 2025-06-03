@@ -28,43 +28,42 @@
   <div class="container">
     <div class="row">
       <!-- Sidebar Start -->
-      <div class="col-lg-4">
-        <div class="sidebar-area">
-         
-          <!-- Categories Widget -->
-          <div class="_sidebar-widget _list mt-40">
-            <h3>Categories</h3>
-            
-            <!-- Desktop category list -->
-            <div class="sidebar-list desktop-category-list">
-              <ul>
-                <li><a href="{% url 'web:product' %}">All<span>({{ total_products_count }})</span></a></li>
-                {% for category in product_categories %}
-                  <li>
-                    <a href="{% url 'web:product' %}?category={{ category.slug }}">
-                      {{ category.title }} <span>({{ category.product_set.count }})</span>
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
+        <div class="col-lg-4">
+          <div class="sidebar-area">
+            <div class="_sidebar-widget _list mt-40">
+              <h3>Categories</h3>
 
-            <!-- Mobile category dropdown -->
-            <div class="mobile-category-select">
-              <select id="category-select" onchange="location = this.value;">
-                <option value="{% url 'web:product' %}" {% if not selected_category %}selected{% endif %}>
-                  All ({{ total_products_count }})
-                </option>
-                {% for category in product_categories %}
-                  <option value="{% url 'web:product' %}?category={{ category.slug }}" {% if selected_category == category.slug %}selected{% endif %}>
-                    {{ category.title }} ({{ category.product_count }})
+              <!-- Desktop category list -->
+              <div class="sidebar-list desktop-category-list">
+                <ul>
+                  <li><a href="{% url 'web:product' %}">All<span>({{ total_products_count }})</span></a></li>
+                  {% for category in product_categories %}
+                    <li>
+                      <a href="{% url 'web:product' %}?category={{ category.slug }}">
+                        {{ category.title }} <span>({{ category.product_set.count }})</span>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+              <!-- Mobile category dropdown -->
+              <div class="mobile-category-select">
+                <select id="category-select" onchange="location = this.value;">
+                  <option value="{% url 'web:product' %}" {% if not selected_category %}selected{% endif %}>
+                    All ({{ total_products_count }})
                   </option>
-                {% endfor %}
-              </select>
+                  {% for category in product_categories %}
+                    <option value="{% url 'web:product' %}?category={{ category.slug }}" {% if selected_category == category.slug %}selected{% endif %}>
+                      {{ category.title }} ({{ category.product_count }})
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
-          </div>
-      </div>
-      <!-- Sidebar End -->
+          </div> <!-- FIXED: Properly closed sidebar-area -->
+        </div>
+        <!-- Sidebar End -->
 
       <!-- Products Listing Start -->
       <div class="col-lg-8">

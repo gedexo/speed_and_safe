@@ -55,7 +55,7 @@ CSS LIST
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap");
 body {
   font-size: var(--f-fs-font-15);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: var(--f-fw-normal);
   background-position: center top;
   background-repeat: no-repeat;

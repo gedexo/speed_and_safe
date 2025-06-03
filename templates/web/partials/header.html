@@ -5,7 +5,7 @@
 
     <div id="vl-header-sticky" class="vl-header-area1 header-tranperent">
        <div class="container header1-bg">
-          <div class="header-top-area d-none d-lg-block">
+          {% comment %} <div class="header-top-area d-none d-lg-block">
              <div class="row justify-content-between">
                 
                 <div class="col-lg-6">
@@ -20,15 +20,15 @@
                    </div>
                 </div>
              </div>
-          </div>
+          </div> {% endcomment %}
           <div class="row align-items-center">
                 <div class="col-lg-3 col-md-6 col-6">
                    <div class="vl-logo">
-                      <a href="{% url 'web:index' %}" class="header1-logo d-none d-lg-block"><img src="/static/web/assets/img/logo/logo.png" alt=""></a>
+                      <a href="{% url 'web:index' %}" class="header1-logo d-none d-lg-block"><img src="/static/web/assets/img/logo/white-logo.png" alt=""></a>
                       <a href="{% url 'web:index' %}" class="header1-logo d-block d-lg-none"><img src="/static/web/assets/img/logo/logo.png" alt=""></a>
                    </div>
                 </div>
-                <div class="col-lg-6 d-none d-lg-block text-start">
+                <div class="col-lg-6 d-none d-lg-block text-center">
                    <div class="vl-main-menu">
                       <nav class="vl-mobile-menu-active">
                             <ul>
