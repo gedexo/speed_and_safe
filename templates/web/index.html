@@ -4,7 +4,7 @@
 
    <!--===== HERO AREA START =====-->
 
-   <div class="hero5-area _relative">
+   {% comment %} <div class="hero5-area _relative">
       <div class="swiper-container5 _relative">
          <div class="swiper-wrapper">
 
@@ -25,10 +25,6 @@
                            <div class="button mt-30" data-aos="fade-left" data-aos-duration="1400">
                            <a class="theme-btn1" href="{% url 'web:about' %}">
                               <span class="text">Know More</span>
-                              {% comment %} <span class="arrow-all">
-                                 <span class="arrow1"><i class="fa-regular fa-arrow-right"></i></span>
-                                 <span class="arrow2"><i class="fa-regular fa-arrow-right"></i></span>
-                              </span> {% endcomment %}
                            </a>
                            </div>
                         </div>
@@ -46,7 +42,51 @@
         <button class="swiper-button-prev"></button>
         <button class="swiper-button-next"></button>
       </div>
+   </div> {% endcomment %}
+   <div class="hero5-area _relative">
+      <div class="swiper-container5 _relative">
+         <div class="swiper-wrapper">
+   
+            {% for banner in banners %}
+            <div class="swiper-slide">
+               <div class="overlay"></div>
+   
+               <div class="main-bg-video">
+                  <video autoplay muted loop playsinline>
+                     <source src="{{ banner.image.url }}" type="video/mp4">
+                     Your browser does not support the video tag.
+                  </video>
+               </div>
+   
+               <div class="hero5-content">
+                  <div class="container">
+                     <div class="row align-items-center">
+                        <div class="col-lg-10 text-center m-auto">
+                           <div class="hero5-heading">
+                              <span class="sub-title">{{ banner.sub_title }}</span>
+                              <h1>{{ banner.title }}</h1>
+                              <div class="button mt-30" data-aos="fade-left" data-aos-duration="1400">
+                                 <a class="theme-btn1" href="{% url 'web:about' %}">
+                                    <span class="text">Know More</span>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+   
+         </div>
+      </div>
+      
+      <div class="hero5-slider-btns">
+         <button class="swiper-button-prev"></button>
+         <button class="swiper-button-next"></button>
+      </div>
    </div>
+   
 
    <!--===== HERO AREA START =====-->
 
@@ -72,9 +112,9 @@
            </div>
            <div class="col-lg-6">
                <div class="heading1 md:mt-30 sm:mt-30">
-                   <span class="sub-title2 left-side" data-aos="fade-left" data-aos-duration="800">Reliable Logistics Solutions</span>
-                   <h2 data-aos="fade-left" data-aos-duration="1000">Delivering Dependability Reliable Logistics Service</h2>
-                   <p class="mt-16" data-aos="fade-left" data-aos-duration="1200">Established in 2017, we are one of the most trusted and sought-after wholesale distributors of high-quality food and non-food products across the Middle East. From premium meat, poultry, and seafood to a wide range of groceries and household essentials, our expanding footprint covers the UAE and the broader GCC region. Known for our reliability, consistency, and customer-focused approach, we are committed to delivering excellence in every bulk trade partnership we build.</p>
+                   <span class="sub-title2 left-side" data-aos="fade-left" data-aos-duration="800">Global Food Trade Experts</span>
+                   <h2 data-aos="fade-left" data-aos-duration="1000">Importing Quality, Exporting Trust </h2>
+                   <p class="mt-16" data-aos="fade-left" data-aos-duration="1200">Established in 2017, we are a leading food import and export company based in Dubai, specializing in sourcing and supplying high-quality food products across international markets. From premium meat, poultry, and seafood to a diverse range of groceries and everyday essentials, we connect global suppliers with buyers across the Middle East and beyond. With a strong presence in the UAE and GCC region, our reputation is built on reliability, consistency, and a deep commitment to quality in every trade partnership we establish.</p>
                    
                    <div class="button mt-30" data-aos="fade-left" data-aos-duration="1300">
                        <a class="theme-btn3" href="{% url 'web:about' %}">Read More </a>
@@ -106,7 +146,9 @@
                   <div class="box-area" data-aos="flip-right" data-aos-duration="800">
                      <div class="box mr-30 sm:mr-0">
                         <h4><a >Farm</a></h4>
-                        <p class="mt-10">We collaborate directly with a trusted network of farmers to source the freshest, highest-quality raw materials, eliminating the need for intermediaries.</p>
+                        <p class="mt-10">We work closely with a trusted network of international farmers and producers to source the freshest, highest-quality food products—ensuring transparency and traceability by eliminating middlemen.
+
+                        </p>
                      </div>
                      <div class="num">
                         <h5>01</h5>
@@ -117,8 +159,11 @@
                <div class="delivery1-item-box2 mt-40">
                   <div class="box-area" data-aos="flip-right" data-aos-duration="1000">
                      <div class="box mr-30 sm:mr-0">
-                        <h4><a>Production Units</a></h4>
-                        <p class="mt-10">Our products adhere to the highest quality and hygiene standards, utilizing the latest technology to process and grade raw materials efficiently.</p>
+                        <h4><a>Processing & Packaging
+                        </a></h4>
+                        <p class="mt-10">Our products meet strict quality and hygiene standards, utilizing modern processing facilities and technology to maintain freshness and safety from farm to shipment.
+
+                        </p>
                      </div>
                      <div class="num">
                         <h5>02</h5>
@@ -155,8 +200,11 @@
                         <h5>03</h5>
                      </div>
                      <div class="box ml-30 sm:ml-0">
-                        <h4><a>FMCG Distributors</a></h4>
-                        <p class="mt-10">We are dedicated to offering families a broad selection of essential consumer products for their everyday requirements. Our product range features a variety of cereals, pulses, spices, and more.</p>
+                        <h4><a>Wholesale Distribution
+                        </a></h4>
+                        <p class="mt-10">We supply a wide range of essential food items—including cereals, pulses, spices, and more—catering to wholesalers and retailers who serve families across the Middle East.
+
+                        </p>
                      </div>
                   </div>
                </div>
@@ -168,8 +216,11 @@
                         <h5>04</h5>
                      </div>
                      <div class="box ml-30 sm:ml-0">
-                        <h4><a>Export to GCC & African Countries</a></h4>
-                        <p class="mt-10">We are honored to export our consumer products to the GCC and African countries, where they have been warmly received by those who value our dedication to quality and affordability.</p>
+                        <h4><a>Export to International Markets
+                        </a></h4>
+                        <p class="mt-10">We proudly export our products to a wide range of global markets, where they are valued for their consistent quality, competitive pricing, and dependable supply.
+
+                        </p>
                      </div>
                   </div>
                   

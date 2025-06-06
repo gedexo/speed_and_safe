@@ -91,7 +91,7 @@
 }
 
 .heading1 h2 {
-  font-size: var(--f-fs-font-34) !important;
+  font-size: var(--f-fs-font-30) !important;
 }
 
 .contact1-form .contact1-input textarea {
@@ -757,4 +757,36 @@
 }
 .hero5-heading .sub-title{
     color: #4abb4e !important;
+}
+
+.misson-imge-1 img{
+  height: 480px;
+  object-fit: cover;
+  width: 380px;
+  border-radius: 20px;
+}
+.misson-imge-2 img{
+  height: 404px;
+  width: 304px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.main-bg-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4); /* Optional overlay */
+  z-index: 0;
 }
