@@ -32,6 +32,7 @@ class ProductAdmin(ImportExportModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title',)
     list_filter = ('title', 'category',)
+    list_editable = ('category',)
 
 @admin.register(ProductEnquiry)
 class ProductEnquiryAdmin(admin.ModelAdmin):
