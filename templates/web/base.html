@@ -5,8 +5,38 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Speed And Safe</title>
 
+    {% block meta %}
+        <!-- Primary Meta Tags -->
+        <title>{{meta.meta_title}}</title>
+        <meta name="title" content="{{meta.meta_title}}" />
+        <meta name="description" content="{{meta.meta_description}}" />
+        <meta name="keywords" content="{{meta.meta_keywords}}">
+        <link rel="canonical" href="{{meta.canonical_url}}" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{meta.canonical_url}}" />
+        <meta property="og:title" content="{{meta.meta_title}}" />
+        <meta property="og:description" content="{{meta.meta_description}}" />
+        {% if meta.image %}
+            <meta property="og:image" content="{{meta.image.url}}" />
+        {% else %}
+            <meta property="og:image" content="{% static 'web/assets/img/meta_image.jpg' %}" />
+        {% endif %}
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="{{meta.canonical_url}}" />
+        <meta property="twitter:title" content="{{meta.meta_title}}" />
+        <meta property="twitter:description" content="{{meta.meta_description}}" />
+        {% if meta.image %}
+            <meta property="twitter:image" content="{{meta.image.url}}" />
+        {% else %}
+            <meta property="twitter:image" content="{% static 'web/assets/img/meta_image.jpg' %}" />
+        {% endif %}
+    
+    {% endblock meta %}
      <!--=====FAB ICON=======-->
      <link rel="shortcut icon" href="{% static 'web/assets/img/logo/favicon.svg' %}" type="image/x-icon">
 

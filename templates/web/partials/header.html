@@ -32,27 +32,27 @@
                    <div class="vl-main-menu">
                       <nav class="vl-mobile-menu-active">
                             <ul>
-                               <li class="">
+                               <li class="{% if is_index %}active{% endif %}">
                                   <a href="{% url 'web:index' %}">Home <span></span></a>
                                </li>
 
-                              <li class="">
+                              <li class="{% if is_about %}active{% endif %}">
                                  <a href="{% url 'web:about' %}">About <span></span></a>
                               </li>
                               
-                              <li class="">
+                              <li class="{% if is_brands %}active{% endif %}">
                                  <a href="{% url 'web:brand' %}">Brands <span></span></a>
                               </li>
 
-                              <li class="">
+                              <li class="{% if is_products %}active{% endif %}">
                                  <a href="{% url 'web:product' %}">Products <span></span></a>
                               </li>
 
-                              <li class="">
+                              <li class="{% if is_blogs %}active{% endif %}">
                                  <a href="{% url 'web:blog' %}">Blogs <span></span></a>
                               </li>
 
-                              <li class="">
+                              <li class="{% if is_contact %}active{% endif %}">
                                  <a href="{% url 'web:contact' %}">Contact <span></span></a>
                               </li>
                               

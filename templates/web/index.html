@@ -12,7 +12,11 @@
             <div class="swiper-slide">
                <div class="overlay"></div>
                <div class="main-bg-image">
-                  <img src="{{banner.image.url}}" alt="{{banner.title}}">
+                  <!-- Desktop Image (hidden on small devices) -->
+                  <img src="{{banner.image.url}}" alt="{{banner.title}}" class="desktop-img d-none d-md-block">
+
+                  <!-- Mobile Image (visible only on small devices) -->
+                  <img src="{{banner.mobile_image.url}}" alt="{{banner.title}}" class="mobile-img d-block d-md-none">
                </div>
 
                <div class="hero5-content">

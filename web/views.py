@@ -7,7 +7,7 @@ from django.http import JsonResponse
 from django.core.mail import EmailMessage
 from django.db.models import Count
 
-from .models import Banner, Blog, Product, Brand, FAQ, ProductCategory
+from .models import Banner, Blog, Product, Brand, FAQ, ProductCategory, Meta
 from .forms import ContactForm, ProductEnquiryForm
 
 
@@ -17,22 +17,28 @@ def index(request):
     product_categories = ProductCategory.objects.all()
     faqs = FAQ.objects.all()
     brands = Brand.objects.all()
-    context = {"is_index": True, "banners":banners, "blogs":blogs, "product_categories":product_categories, "faqs":faqs, "brands":brands}
+    meta = Meta.objects.filter(page="home").first()
+    context = {"is_index": True, "banners":banners, "blogs":blogs, "product_categories":product_categories, "faqs":faqs, "brands":brands, "meta":meta}
     return render(request, "web/index.html", context)
 
 
 def about(request):
+    meta = Meta.objects.filter(page="about").first()
     context = {
         "is_about": True,
+        "meta":meta
     }
     return render(request, "web/about.html", context)
 
 
 def brand(request):
+    meta = Meta.objects.filter(page="brands").first()
     brands = Brand.objects.all()
 
     context = {
-        "brands":brands
+        "is_brands":True,
+        "brands":brands,
+        "meta": meta,
     }
     return render(request, "web/brand.html", context)
 
@@ -45,6 +51,7 @@ def brand(request):
 
 
 def product(request):
+    meta = Meta.objects.filter(page="products").first()
     brand_slug = request.GET.get('brand')
     category_slug = request.GET.get('category')
 
@@ -63,13 +70,14 @@ def product(request):
     page_obj = paginator.get_page(page_number)
 
     context = {
-        "is_product": True,
+        "is_products": True,
         "products": page_obj,
         "page_obj": page_obj,
         "selected_brand": brand_slug,
         "selected_category": category_slug,
         "product_categories": product_categories,
         "total_products_count": Product.objects.count(),
+        "meta":meta,
     }
     return render(request, "web/product.html", context)
 
@@ -158,6 +166,7 @@ def product_detail(request, slug):
 
 
 def blog(request):
+    meta = Meta.objects.filter(page="blogs").first()
     blog_list = Blog.objects.all()
     paginator = Paginator(blog_list, 6) 
 
@@ -165,8 +174,9 @@ def blog(request):
     page_obj = paginator.get_page(page_number)
 
     context = {
-        "is_blog":True,
-        "page_obj": page_obj
+        "is_blogs":True,
+        "page_obj": page_obj,
+        "meta":meta,
     }
     return render(request, "web/blog.html", context)
 
@@ -183,6 +193,7 @@ def blog_detail(request, slug):
 
 
 def contact(request):
+    meta = Meta.objects.filter(page="contact").first()
     if request.method == "POST":
         form = ContactForm(request.POST)
         
@@ -250,5 +261,6 @@ def contact(request):
             "is_contact": True,
             "form": form,
             "turnstile_site_key": settings.CLOUDLFAIR_TURNSTILE_PUBLIC_KEY,
+            "meta":meta,
         }
         return render(request, "web/contact.html", context)

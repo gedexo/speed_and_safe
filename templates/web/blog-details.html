@@ -2,9 +2,17 @@
 {% load static %}
 {% block content %}
 
+{% block meta %}
+   <title>{{blog.meta_title}}</title>
+   <meta name="title" content="{{blog.meta_title}}" />
+   <meta name="description" content="{{blog.meta_description}}" />
+   <meta name="keywords" content="{{blog.meta_keywords}}">
+   <link rel="canonical" href="{{blog.canonical_url}}" />
+{% endblock meta %}
+
    <!--===== HERO AREA START =====-->
 
-   <div class="inner-hero bg-cover" style="background-image: url({% static 'web/assets/img/bg/inner-hero-bg.jpg' %});">
+   <div class="inner-hero bg-cover" style="background-image: url({% static 'web/assets/img/bg/breadcrumbs.png' %});">
       <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -12,7 +20,7 @@
                     <h1>Our Blog Details</h1>
                     <div class="breadcrumbs-pages">
                         <ul>
-                           <li><a href="index.html' %}">Home</a></li>
+                           <li><a href="{% url 'web:index' %}">Home</a></li>
                            <li class="angle"><i class="fa-solid fa-angle-right"></i></li>
                            <li>Our Blog Details</li>
                         </ul>

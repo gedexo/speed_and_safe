@@ -51,3 +51,7 @@ class BrandAdmin(ImportExportModelAdmin):
 @admin.register(FAQ)
 class FAQAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Meta)
+class MetaAdmin(admin.ModelAdmin):
+    list_display = ("page", "meta_title",)
