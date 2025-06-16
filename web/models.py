@@ -4,9 +4,15 @@ from django.urls import reverse_lazy
 
 class Banner(models.Model):
     title = models.CharField(max_length=180)
-    sub_title = models.CharField(max_length=180,)
-    image = models.FileField(upload_to="banners/", null=True)
-    mobile_image = models.FileField(upload_to="mobile_banners/", null=True)
+    sub_title = models.CharField(max_length=180)
+    image = models.FileField(upload_to="banners/", null=True, blank=True)
+    mobile_image = models.FileField(upload_to="mobile_banners/", null=True, blank=True)
+    order = models.PositiveIntegerField(
+        default=0,
+        null=True,
+        blank=True,
+        help_text="Lower numbers display first"
+    )
 
     def __str__(self):
         return self.title
@@ -14,6 +20,7 @@ class Banner(models.Model):
     class Meta:
         verbose_name = "Banner"
         verbose_name_plural = "Banners"
+        ordering = ['order']  # Automatically orders banners by 'order'
 
     
 class Contact(models.Model):
