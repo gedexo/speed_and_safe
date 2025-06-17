@@ -53,6 +53,8 @@ CSS LIST
 ::::::::::::::::::::::::::
 */
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap');
+
 body {
   font-size: var(--f-fs-font-15);
   font-family: "Poppins", sans-serif;
@@ -61,7 +63,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+p {
+  font-family: "Lora", serif !important;
+  font-weight: 400; /* Regular weight */
+}
 .body1 {
   background-color: var(--vtc-bg-white);
   overflow-x: hidden;
